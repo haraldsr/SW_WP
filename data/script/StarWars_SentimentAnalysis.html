@@ -1,0 +1,3119 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; The Skywalker Saga</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">The Skywalker Saga</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to the Universe of the Star Wars trilogies
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Page_Data_vis.html">
+   The Star Wars data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Page_Network.html">
+   The Star Wars network
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Page_NLP.html">
+   Word clouds
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Page_Script.html">
+   Movie Scripts Analysis
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/data/script/StarWars_SentimentAnalysis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/MiaMiya/Star_Wars_Trilogies"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/MiaMiya/Star_Wars_Trilogies/issues/new?title=Issue%20on%20page%20%2Fdata/script/StarWars_SentimentAnalysis.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/MiaMiya/Star_Wars_Trilogies/master?urlpath=tree/docs/data/script/StarWars_SentimentAnalysis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p>1 Introduction</p>
+<p>In this kernel we are going to perform a statistical text analysis on the Star Wars scripts from The Original Trilogy Episodes (IV, V and VI), using wordclouds to show the most frequent words. The input files used for the analysis are avaliable here. This post is my particular tribute to the Star Wars Day, on May 4.</p>
+<p>2 Loading data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load libraries</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">wordcloud</span> <span class="kn">import</span> <span class="n">STOPWORDS</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span><span class="p">,</span> <span class="n">defaultdict</span><span class="p">,</span> <span class="n">Counter</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">TweetTokenizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+<span class="kn">import</span> <span class="nn">tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">tokenize</span> <span class="kn">import</span> <span class="n">tokenize</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span> <span class="nn">wordcloud</span> <span class="kn">import</span> <span class="n">WordCloud</span>
+<span class="c1">#from ggplot import *</span>
+
+<span class="c1"># Read the data</span>
+<span class="n">ep4_file</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">Users</span><span class="se">\\</span><span class="s2">kahma</span><span class="se">\\</span><span class="s2">Downloads</span><span class="se">\\</span><span class="s2">star-wars-movie-scripts</span><span class="se">\\</span><span class="s2">star-wars-movie-scripts</span><span class="se">\\</span><span class="s2">SW_EpisodeIV.txt&quot;</span>
+<span class="n">ep5_file</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">Users</span><span class="se">\\</span><span class="s2">kahma</span><span class="se">\\</span><span class="s2">Downloads</span><span class="se">\\</span><span class="s2">star-wars-movie-scripts</span><span class="se">\\</span><span class="s2">star-wars-movie-scripts</span><span class="se">\\</span><span class="s2">SW_EpisodeV.txt&quot;</span>
+<span class="n">ep6_file</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">Users</span><span class="se">\\</span><span class="s2">kahma</span><span class="se">\\</span><span class="s2">Downloads</span><span class="se">\\</span><span class="s2">star-wars-movie-scripts</span><span class="se">\\</span><span class="s2">star-wars-movie-scripts</span><span class="se">\\</span><span class="s2">SW_EpisodeVI.txt&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\miaha\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_10260</span><span class="o">/</span><span class="mf">404331327.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="kn">import</span> <span class="nn">csv</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">TweetTokenizer</span>
+<span class="ne">---&gt; </span><span class="mi">15</span> <span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="kn">import</span> <span class="nn">tokenize</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>3 Functions</p>
+<p>The first function performs cleaning and preprocessing steps to a corpus:
+str.replace(‘[^\w\s]’,’’). Remove all punctuation marks
+str.replace(‘  ‘, ‘’). Remove excess whitespace
+lambda x: x.lower(). Make all characters lowercase
+lambda x: ‘ ‘.join(item for item in x if item not in new_stopwords_list)). Remove some common English stop words (“I”, “she’ll”, “the”, etc.)
+str.replace(‘\d+’, ‘’). Remove numbers</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Text transformations</span>
+<span class="k">def</span> <span class="nf">cleancorpus</span><span class="p">(</span><span class="n">txtfile</span><span class="p">):</span>
+
+    <span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">))</span>
+    <span class="c1"># add words that aren&#39;t in the NLTK stopwords list</span>
+    <span class="n">new_stopwords</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;thats&#39;</span><span class="p">,</span><span class="s1">&#39;weve&#39;</span><span class="p">,</span><span class="s1">&#39;hes&#39;</span><span class="p">,</span><span class="s1">&#39;theres&#39;</span><span class="p">,</span><span class="s1">&#39;ive&#39;</span><span class="p">,</span><span class="s1">&#39;im&#39;</span><span class="p">,</span><span class="s1">&#39;will&#39;</span><span class="p">,</span><span class="s1">&#39;can&#39;</span><span class="p">,</span><span class="s1">&#39;cant&#39;</span><span class="p">,</span><span class="s1">&#39;dont&#39;</span><span class="p">,</span><span class="s1">&#39;youve&#39;</span><span class="p">,</span><span class="s1">&#39;us&#39;</span>
+        <span class="p">,</span><span class="s1">&#39;youre&#39;</span><span class="p">,</span><span class="s1">&#39;youll&#39;</span><span class="p">,</span><span class="s1">&#39;theyre&#39;</span><span class="p">,</span><span class="s1">&#39;whats&#39;</span><span class="p">,</span><span class="s1">&#39;didnt&#39;</span><span class="p">]</span>
+    <span class="n">new_stopwords_list</span> <span class="o">=</span> <span class="n">stop_words</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">new_stopwords</span><span class="p">)</span>
+    <span class="n">data1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">txtfile</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">)</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;max_colwidth&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+    <span class="n">data1</span><span class="p">[</span><span class="s2">&quot;dialogue&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data1</span><span class="p">[</span><span class="s2">&quot;dialogue&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;[^\w\s]&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="n">data1</span><span class="o">.</span><span class="n">dialogue</span> <span class="o">=</span> <span class="n">data1</span><span class="o">.</span><span class="n">dialogue</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="n">data1</span><span class="o">.</span><span class="n">dialogue</span> <span class="o">=</span> <span class="n">data1</span><span class="o">.</span><span class="n">dialogue</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;\d+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="n">data1</span><span class="o">.</span><span class="n">dialogue</span> <span class="o">=</span> <span class="n">data1</span><span class="o">.</span><span class="n">dialogue</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">()</span><span class="o">.</span><span class="n">apply</span>\
+        <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">x</span> <span class="k">if</span> <span class="n">item</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">new_stopwords_list</span><span class="p">))</span>
+    <span class="n">data1</span><span class="o">.</span><span class="n">dialogue</span> <span class="o">=</span> <span class="n">data1</span><span class="o">.</span><span class="n">dialogue</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="c1">#print(data1.dialogue.head(120))</span>
+    <span class="c1">#print(data.dialogue)</span>
+    <span class="k">return</span> <span class="n">data1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The second function constructs the term-document matrix, that describes the frequency of terms that occur in a collection of documents. This matrix has terms in the first column and documents across the top as individual column names.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_top_n_words</span><span class="p">(</span><span class="n">corpus</span><span class="p">):</span>
+    <span class="n">word_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">dialogue_list</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">corpus</span><span class="p">[</span><span class="s1">&#39;dialogue&#39;</span><span class="p">])</span>
+    <span class="n">dialogue_list_temp</span> <span class="o">=</span> <span class="n">dialogue_list</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">stat</span> <span class="ow">in</span> <span class="n">dialogue_list_temp</span><span class="p">:</span>
+        <span class="n">word_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">stat</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+    <span class="n">word_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">word_list</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">word_series</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The next two functions extract tokens containing two words.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define bigram tokenizer </span>
+<span class="k">def</span> <span class="nf">bigrams_calculate</span><span class="p">(</span><span class="n">bigramfile</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">cleancorpus</span><span class="p">(</span><span class="n">bigramfile</span><span class="p">)</span><span class="o">.</span><span class="n">dialogue</span> \
+        <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> \
+        <span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">i</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">bigrams</span> <span class="o">=</span> <span class="n">j</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">bigrams</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Most frequent bigrams</span>
+<span class="k">def</span> <span class="nf">most_frequent_bigrams</span><span class="p">(</span><span class="n">freq_bigrams</span><span class="p">):</span>
+    <span class="n">bigrams_list</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">freq_bigrams</span><span class="p">)</span>
+    <span class="n">count_bigrams</span> <span class="o">=</span> <span class="n">bigrams_list</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">count_bigrams</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>4 Episode IV: A New Hope</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># How many dialogues?</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total Dialogues in Episode 4- A New Hope:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleancorpus</span><span class="p">(</span><span class="n">ep4_file</span><span class="p">)</span><span class="o">.</span><span class="n">dialogue</span><span class="p">),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total Dialogues in Episode 4- A New Hope: 1010 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># How many characters?</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total Characters in Episode 4- A New Hope:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleancorpus</span><span class="p">(</span><span class="n">ep4_file</span><span class="p">)</span><span class="o">.</span><span class="n">character</span><span class="o">.</span><span class="n">unique</span><span class="p">()),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total Characters in Episode 4- A New Hope: 60 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">seriestodf</span><span class="p">(</span><span class="n">series</span><span class="p">):</span>
+    <span class="n">df_temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">series</span><span class="p">)</span>
+    <span class="n">df_temp</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">df_temp</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Character&#39;</span><span class="p">,</span> <span class="s1">&#39;Dialogue&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df_temp</span>
+
+
+<span class="k">def</span> <span class="nf">seriestodfbigram</span><span class="p">(</span><span class="n">series</span><span class="p">):</span>
+    <span class="n">df_temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">series</span><span class="p">)</span>
+    <span class="n">df_temp</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">df_temp</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Bigram&#39;</span><span class="p">,</span> <span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df_temp</span>
+
+<span class="n">Top20Chars_ep4</span> <span class="o">=</span> <span class="n">cleancorpus</span><span class="p">(</span><span class="n">ep4_file</span><span class="p">)</span><span class="o">.</span><span class="n">character</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">Top20Chars_ep5</span> <span class="o">=</span> <span class="n">cleancorpus</span><span class="p">(</span><span class="n">ep5_file</span><span class="p">)</span><span class="o">.</span><span class="n">character</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">Top20Chars_ep6</span> <span class="o">=</span> <span class="n">cleancorpus</span><span class="p">(</span><span class="n">ep6_file</span><span class="p">)</span><span class="o">.</span><span class="n">character</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="n">df_ep4</span> <span class="o">=</span> <span class="n">seriestodf</span><span class="p">(</span><span class="n">Top20Chars_ep4</span><span class="p">)</span>
+<span class="n">df_ep5</span> <span class="o">=</span> <span class="n">seriestodf</span><span class="p">(</span><span class="n">Top20Chars_ep5</span><span class="p">)</span>
+<span class="n">df_ep6</span> <span class="o">=</span> <span class="n">seriestodf</span><span class="p">(</span><span class="n">Top20Chars_ep6</span><span class="p">)</span>
+<span class="n">df_ep4_bigram</span> <span class="o">=</span> <span class="n">seriestodfbigram</span><span class="p">(</span><span class="n">most_frequent_bigrams</span><span class="p">(</span><span class="n">bigrams_calculate</span><span class="p">(</span><span class="n">ep4_file</span><span class="p">)))</span>
+<span class="n">df_ep5_bigram</span> <span class="o">=</span> <span class="n">seriestodfbigram</span><span class="p">(</span><span class="n">most_frequent_bigrams</span><span class="p">(</span><span class="n">bigrams_calculate</span><span class="p">(</span><span class="n">ep5_file</span><span class="p">)))</span>
+<span class="n">df_ep6_bigram</span> <span class="o">=</span> <span class="n">seriestodfbigram</span><span class="p">(</span><span class="n">most_frequent_bigrams</span><span class="p">(</span><span class="n">bigrams_calculate</span><span class="p">(</span><span class="n">ep6_file</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Top 20 characters with more dialogues </span>
+<span class="n">Top20Chars_ep4</span> <span class="o">=</span> <span class="n">cleancorpus</span><span class="p">(</span><span class="n">ep4_file</span><span class="p">)</span><span class="o">.</span><span class="n">character</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Top20Chars_ep4</span><span class="p">)</span>
+
+<span class="c1"># Visualization</span>
+
+<span class="n">df_ep4</span> <span class="o">=</span> <span class="n">seriestodf</span><span class="p">(</span><span class="n">Top20Chars_ep4</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">ggplt</span><span class="p">(</span><span class="n">df_ep</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">df_ep</span><span class="p">[[</span><span class="s1">&#39;Character&#39;</span><span class="p">,</span> <span class="s1">&#39;Dialogue&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Dialogues by a character(Top 20)&quot;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+                                               <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Character&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Number of Dialogues&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">ggplt</span><span class="p">(</span><span class="n">df_ep4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LUKE              254
+HAN               153
+THREEPIO          119
+BEN                82
+LEIA               57
+VADER              41
+RED LEADER         37
+BIGGS              34
+TARKIN             28
+OWEN               25
+TROOPER            19
+WEDGE              14
+GOLD LEADER        14
+OFFICER            11
+RED TEN             8
+GOLD FIVE           7
+FIRST TROOPER       6
+INTERCOM VOICE      6
+AUNT BERU           6
+GREEDO              6
+Name: character, dtype: int64
+</pre></div>
+</div>
+<img alt="../../_images/StarWars_SentimentAnalysis_16_1.png" src="../../_images/StarWars_SentimentAnalysis_16_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">wordcloud</span><span class="p">(</span><span class="n">data_file</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span> <span class="k">if</span> <span class="s2">&quot;__file__&quot;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">()</span> <span class="k">else</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+    <span class="n">eiv</span> <span class="o">=</span> <span class="p">(</span><span class="n">get_top_n_words</span><span class="p">(</span><span class="n">cleancorpus</span><span class="p">(</span><span class="n">data_file</span><span class="p">)))</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">kahma</span><span class="se">\\</span><span class="s1">Downloads</span><span class="se">\\</span><span class="s1">star-wars-movie-scripts&#39;</span>
+                                        <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">star-wars-movie-scripts</span><span class="se">\\</span><span class="s1">wordcloud_masks</span><span class="se">\\</span><span class="s1">yoda.png&#39;</span><span class="p">)))</span>
+    <span class="n">eiv_wc</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">background_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">21</span><span class="p">,</span>
+                   <span class="n">max_font_size</span><span class="o">=</span><span class="mi">110</span><span class="p">)</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">eiv</span><span class="p">))</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">eiv_wc</span><span class="p">)</span>
+
+<span class="n">wordcloud</span><span class="p">(</span><span class="n">ep4_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/StarWars_SentimentAnalysis_17_0.png" src="../../_images/StarWars_SentimentAnalysis_17_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Most frequent bigrams</span>
+<span class="k">def</span> <span class="nf">ggplt_biagram</span><span class="p">(</span><span class="n">df_ep_bigram</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">df_ep_bigram</span><span class="p">[[</span><span class="s1">&#39;Bigram&#39;</span><span class="p">,</span> <span class="s1">&#39;Frequency&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Most Frequent Bigrams(Top 20)&quot;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+                                                    <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;BIGRAM&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;FREQUENCY&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="n">ggplt_biagram</span><span class="p">(</span><span class="n">df_ep4_bigram</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/StarWars_SentimentAnalysis_18_0.png" src="../../_images/StarWars_SentimentAnalysis_18_0.png" />
+</div>
+</div>
+<p>5 Episode V: The Empire Strikes Back</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># How many dialogues?</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total Dialogues in Episode 5 - The Empire Strikes Back:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleancorpus</span><span class="p">(</span><span class="n">ep5_file</span><span class="p">)</span><span class="o">.</span><span class="n">dialogue</span><span class="p">),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total Dialogues in Episode 5 - The Empire Strikes Back: 839 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># How many characters?</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total Characters in Episode 5 - The Empire Strikes Back:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleancorpus</span><span class="p">(</span><span class="n">ep5_file</span><span class="p">)</span><span class="o">.</span><span class="n">character</span><span class="o">.</span><span class="n">unique</span><span class="p">()),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total Characters in Episode 5 - The Empire Strikes Back: 49 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Top 20 characters with more dialogues</span>
+<span class="n">Top20Chars_ep5</span> <span class="o">=</span> <span class="n">cleancorpus</span><span class="p">(</span><span class="n">ep5_file</span><span class="p">)</span><span class="o">.</span><span class="n">character</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Top20Chars_ep5</span><span class="p">)</span>
+
+<span class="c1"># Visualization </span>
+<span class="n">ggplt</span><span class="p">(</span><span class="n">df_ep5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HAN             182
+LUKE            128
+LEIA            114
+THREEPIO         92
+LANDO            61
+VADER            56
+YODA             36
+PIETT            23
+CREATURE         21
+BEN              15
+RIEEKAN          13
+WEDGE             8
+DECK OFFICER      7
+VEERS             7
+ZEV               6
+EMPEROR           5
+OZZEL             5
+NEEDA             5
+BOBA FETT         4
+DACK              4
+Name: character, dtype: int64
+</pre></div>
+</div>
+<img alt="../../_images/StarWars_SentimentAnalysis_22_1.png" src="../../_images/StarWars_SentimentAnalysis_22_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Wordcloud for Episode V</span>
+<span class="n">wordcloud</span><span class="p">(</span><span class="n">ep5_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/StarWars_SentimentAnalysis_23_0.png" src="../../_images/StarWars_SentimentAnalysis_23_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Most frequent bigrams</span>
+<span class="n">ggplt_biagram</span><span class="p">(</span><span class="n">df_ep5_bigram</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/StarWars_SentimentAnalysis_24_0.png" src="../../_images/StarWars_SentimentAnalysis_24_0.png" />
+</div>
+</div>
+<p>6 Episode VI: Return of the Jedi</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># How many dialogues?</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total Dialogues in Episode 6 - Return of the Jedi:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleancorpus</span><span class="p">(</span><span class="n">ep6_file</span><span class="p">)</span><span class="o">.</span><span class="n">dialogue</span><span class="p">),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total Dialogues in Episode 6 - Return of the Jedi: 674 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># How many characters?</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total Characters in Episode 6 - Return of the Jedi:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleancorpus</span><span class="p">(</span><span class="n">ep6_file</span><span class="p">)</span><span class="o">.</span><span class="n">character</span><span class="o">.</span><span class="n">unique</span><span class="p">()),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total Characters in Episode 6 - Return of the Jedi: 53 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Top 20 characters with more dialogues</span>
+<span class="n">Top20Chars_ep6</span> <span class="o">=</span> <span class="n">cleancorpus</span><span class="p">(</span><span class="n">ep6_file</span><span class="p">)</span><span class="o">.</span><span class="n">character</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="c1"># Visualization</span>
+<span class="n">ggplt</span><span class="p">(</span><span class="n">df_ep6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/StarWars_SentimentAnalysis_28_0.png" src="../../_images/StarWars_SentimentAnalysis_28_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Wordcloud for Episode VI</span>
+<span class="n">wordcloud</span><span class="p">(</span><span class="n">ep6_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/StarWars_SentimentAnalysis_29_0.png" src="../../_images/StarWars_SentimentAnalysis_29_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Most frequent bigrams</span>
+<span class="n">ggplt_biagram</span><span class="p">(</span><span class="n">df_ep6_bigram</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/StarWars_SentimentAnalysis_30_0.png" src="../../_images/StarWars_SentimentAnalysis_30_0.png" />
+</div>
+</div>
+<p>7 The Original Trilogy</p>
+<p>In this section we are going to compute the previous statistics, but now considering the three movies of The Original Trilogy (Episodes IV, V and VI).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The Original Trilogy dialogues </span>
+<span class="n">frames</span> <span class="o">=</span> <span class="p">[</span><span class="n">cleancorpus</span><span class="p">(</span><span class="n">ep4_file</span><span class="p">),</span> <span class="n">cleancorpus</span><span class="p">(</span><span class="n">ep5_file</span><span class="p">),</span> <span class="n">cleancorpus</span><span class="p">(</span><span class="n">ep6_file</span><span class="p">)]</span>
+<span class="n">SW_Trilogy</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">frames</span><span class="p">)</span>
+<span class="n">Trio</span> <span class="o">=</span> <span class="n">SW_Trilogy</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="c1"># How many dialogues?</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total Dialogues in Star Wars Trilogy:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">Trio</span><span class="p">),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total Dialogues in Star Wars Trilogy: 2523 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># How many characters?</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total Characters in Star Wars Trilogy:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">Trio</span><span class="o">.</span><span class="n">character</span><span class="o">.</span><span class="n">unique</span><span class="p">()),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total Characters in Star Wars Trilogy: 129 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Top 20 characters with more dialogues</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total Dialogues of top 20 characters in Star Wars Trilogy:&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">Trio</span><span class="o">.</span><span class="n">character</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Visualization</span>
+<span class="n">Top20Chars_trilogy</span> <span class="o">=</span> <span class="n">SW_Trilogy</span><span class="o">.</span><span class="n">character</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">df_trilogy</span> <span class="o">=</span> <span class="n">seriestodf</span><span class="p">(</span><span class="n">Top20Chars_trilogy</span><span class="p">)</span>
+<span class="n">ggplt</span><span class="p">(</span><span class="n">df_trilogy</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total Dialogues of top 20 characters in Star Wars Trilogy: 
+ LUKE           494
+HAN            459
+THREEPIO       301
+LEIA           227
+VADER          140
+BEN            115
+LANDO          101
+YODA            49
+EMPEROR         44
+RED LEADER      38
+BIGGS           34
+WEDGE           33
+PIETT           31
+TARKIN          28
+JABBA           26
+OWEN            25
+CREATURE        22
+TROOPER         19
+ACKBAR          14
+GOLD LEADER     14
+Name: character, dtype: int64 
+</pre></div>
+</div>
+<img alt="../../_images/StarWars_SentimentAnalysis_35_1.png" src="../../_images/StarWars_SentimentAnalysis_35_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Wordcloud for The Original Trilogy</span>
+<span class="nb">dir</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span> <span class="k">if</span> <span class="s2">&quot;__file__&quot;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">()</span> <span class="k">else</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="n">eiv4</span> <span class="o">=</span> <span class="p">(</span><span class="n">get_top_n_words</span><span class="p">(</span><span class="n">Trio</span><span class="p">))</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">kahma</span><span class="se">\\</span><span class="s1">Downloads</span><span class="se">\\</span><span class="s1">star-wars-movie-scripts</span><span class="se">\\</span><span class="s1">&#39;</span>
+                                        <span class="s1">&#39;star-wars-movie-scripts</span><span class="se">\\</span><span class="s1">wordcloud_masks</span><span class="se">\\</span><span class="s1">yoda.png&#39;</span><span class="p">)))</span>
+<span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">STOPWORDS</span><span class="p">)</span>
+<span class="n">eiv_wc</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">background_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">21</span><span class="p">,</span>
+                   <span class="n">max_font_size</span><span class="o">=</span><span class="mi">110</span><span class="p">,</span> <span class="n">stopwords</span><span class="o">=</span><span class="n">stop_words</span><span class="p">)</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">eiv4</span><span class="p">))</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">eiv_wc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x1d6046a70f0&gt;
+</pre></div>
+</div>
+<img alt="../../_images/StarWars_SentimentAnalysis_36_1.png" src="../../_images/StarWars_SentimentAnalysis_36_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Most frequent bigrams</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">SW_Trilogy</span><span class="o">.</span><span class="n">dialogue</span> \
+        <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> \
+        <span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+<span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">i</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">trio_bigrams</span> <span class="o">=</span> <span class="n">j</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Most Frequent bigrams in Star Wars Trilogy:&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span>
+      <span class="n">most_frequent_bigrams</span><span class="p">(</span><span class="n">trio_bigrams</span><span class="p">),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">df_triology</span> <span class="o">=</span> <span class="n">seriestodfbigram</span><span class="p">(</span><span class="n">most_frequent_bigrams</span><span class="p">(</span><span class="n">trio_bigrams</span><span class="p">))</span>
+
+<span class="n">ggplt_biagram</span><span class="p">(</span><span class="n">df_triology</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Most Frequent bigrams in Star Wars Trilogy: 
+ lord vader        25
+master luke       22
+dark side         20
+luke luke         16
+death star        13
+come back         12
+r unit            12
+obiwan kenobi     12
+yes sir           12
+battle station    12
+looks like        11
+rebel base        11
+captain solo      11
+yes lord          10
+sand people       10
+take care         10
+oh oh             10
+gold leader       10
+let go            10
+lets go            9
+dtype: int64 
+</pre></div>
+</div>
+<img alt="../../_images/StarWars_SentimentAnalysis_37_1.png" src="../../_images/StarWars_SentimentAnalysis_37_1.png" />
+</div>
+</div>
+<p>7.1 Sentiment analysis</p>
+<p>Let’s address the topic of opinion mining or sentiment analysis. We can use the tools of text mining to approach the emotional content of text programmatically.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Transform the text to a tidy data structure with one token per row</span>
+<span class="n">SW_Trilogy</span><span class="p">[</span><span class="s1">&#39;dialogue1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">SW_Trilogy</span><span class="p">[</span><span class="s1">&#39;dialogue&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">word_tokenize</span><span class="p">)</span>
+<span class="n">dialogue_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">SW_Trilogy</span><span class="o">.</span><span class="n">dialogue1</span><span class="p">)</span>
+<span class="n">dialogue_merged</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span><span class="n">dialogue_list</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Frequency of each sentiment</span>
+<span class="n">wordList</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="n">emotionList</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">kahma</span><span class="se">\\</span><span class="s1">OneDrive</span><span class="se">\\</span><span class="s1">Desktop</span><span class="se">\\</span><span class="s1">NRC-Sentiment-Emotion-Lexicons</span><span class="se">\\</span><span class="s1">NRC-Sentiment-Emotion-Lexicons</span><span class="se">\\</span><span class="s1">&#39;</span>
+          <span class="s1">&#39;NRC-Emotion-Lexicon-v0.92</span><span class="se">\\</span><span class="s1">NRC-Emotion-Lexicon-Wordlevel-v0.92.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">headerRows</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">46</span><span class="p">)]</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">headerRows</span><span class="p">:</span>
+        <span class="nb">next</span><span class="p">(</span><span class="n">reader</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">emotion</span><span class="p">,</span> <span class="n">present</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">present</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1">#print(word)</span>
+            <span class="n">wordList</span><span class="p">[</span><span class="n">word</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">emotion</span><span class="p">)</span>
+            <span class="n">emotionList</span><span class="p">[</span><span class="n">emotion</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+            
+<span class="k">def</span> <span class="nf">generate_emotion_count</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">wt</span><span class="p">):</span>
+    <span class="n">emoCount</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">dialogue_merged</span><span class="p">:</span>
+        <span class="n">emoCount</span> <span class="o">+=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">wordList</span><span class="p">[</span><span class="n">token</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">emoCount</span>
+
+
+<span class="n">wt</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span><span class="n">dialogue_list</span><span class="p">))</span>
+<span class="n">emotionCounts</span> <span class="o">=</span> <span class="p">[</span><span class="n">generate_emotion_count</span><span class="p">(</span><span class="n">SW_Trilogy</span><span class="o">.</span><span class="n">dialogue</span><span class="p">,</span> <span class="n">wt</span><span class="p">)]</span>
+<span class="n">dialogues</span> <span class="o">=</span> <span class="n">SW_Trilogy</span><span class="p">[</span><span class="s1">&#39;dialogue&#39;</span><span class="p">]</span>
+<span class="n">emotion_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">emotionCounts</span><span class="p">)</span>
+<span class="n">emotion_df</span> <span class="o">=</span> <span class="n">emotion_df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
+<span class="n">axs</span> <span class="o">=</span> <span class="n">emotion_df</span><span class="p">[[</span><span class="s1">&#39;positive&#39;</span><span class="p">,</span> <span class="s1">&#39;negative&#39;</span><span class="p">,</span> <span class="s1">&#39;trust&#39;</span><span class="p">,</span> <span class="s1">&#39;anticipation&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;fear&#39;</span><span class="p">,</span> <span class="s1">&#39;anger&#39;</span><span class="p">,</span> <span class="s1">&#39;joy&#39;</span><span class="p">,</span> <span class="s1">&#39;sadness&#39;</span><span class="p">,</span> <span class="s1">&#39;surprise&#39;</span><span class="p">,</span> <span class="s1">&#39;disgust&#39;</span><span class="p">]]</span> \
+    <span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Dialogues by a character(Top 20)&quot;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">axs</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;CHARACTER&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">axs</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;DIALOGUE&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/StarWars_SentimentAnalysis_41_0.png" src="../../_images/StarWars_SentimentAnalysis_41_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wordList</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="n">emotionList</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">kahma</span><span class="se">\\</span><span class="s1">OneDrive</span><span class="se">\\</span><span class="s1">Desktop</span><span class="se">\\</span><span class="s1">NRC-Sentiment-Emotion-Lexicons</span><span class="se">\\</span><span class="s1">NRC-Sentiment-Emotion-Lexicons</span><span class="se">\\</span><span class="s1">&#39;</span>
+          <span class="s1">&#39;NRC-Emotion-Lexicon-v0.92</span><span class="se">\\</span><span class="s1">NRC-Emotion-Lexicon-Wordlevel-v0.92.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">headerRows</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">46</span><span class="p">)]</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">headerRows</span><span class="p">:</span>
+        <span class="nb">next</span><span class="p">(</span><span class="n">reader</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">emotion</span><span class="p">,</span> <span class="n">present</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">emotion</span> <span class="o">==</span> <span class="s1">&#39;fear&#39;</span> <span class="ow">and</span> <span class="nb">int</span><span class="p">(</span><span class="n">present</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+<span class="c1">#             wordList[word].append(emotion)</span>
+<span class="c1">#             emotionList[emotion].append(word)</span>
+            
+<span class="c1"># def generate_emotion_count(string, wt):</span>
+<span class="c1">#     emoCount = Counter()</span>
+<span class="c1">#     for token in dialogue_merged:</span>
+<span class="c1">#         emoCount += Counter(wordList[token])</span>
+<span class="c1">#     return emoCount</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abduction
+abhor
+abhorrent
+abominable
+abomination
+abortion
+absence
+abuse
+abyss
+accident
+accidental
+accursed
+accused
+accuser
+accusing
+acrobat
+adder
+adjudicate
+admonition
+adrift
+advance
+adverse
+adversity
+afflict
+affliction
+affront
+afraid
+aftermath
+aga
+aggression
+aggressive
+aggressor
+aghast
+agonizing
+agony
+ailing
+alarm
+alarming
+alcoholism
+alertness
+alerts
+alien
+alienation
+ambulance
+ambush
+anaconda
+anarchism
+anarchist
+anarchy
+anathema
+angina
+anguish
+animosity
+annihilate
+annihilated
+annihilation
+anomaly
+anthrax
+antichrist
+antisocial
+anxiety
+anxious
+apache
+appalling
+apparition
+appendicitis
+apprehend
+apprehension
+apprehensive
+armament
+armaments
+armed
+armor
+armored
+arraignment
+arsenic
+arson
+artillery
+asp
+assail
+assailant
+assassin
+assassinate
+assassination
+assault
+astray
+asylum
+atherosclerosis
+atrocity
+atrophy
+attack
+attacking
+attorney
+auditor
+austere
+autopsy
+avalanche
+averse
+aversion
+avoid
+avoidance
+avoiding
+awful
+bacteria
+bacterium
+bad
+badness
+bailiff
+bait
+bale
+bane
+bang
+banger
+banish
+banished
+bankrupt
+bankruptcy
+banshee
+barbarian
+barbaric
+barricade
+batter
+battered
+battled
+battlefield
+bayonet
+bear
+bearish
+beast
+beastly
+beating
+bee
+behemoth
+belittle
+belligerent
+belt
+bestial
+beware
+bewildered
+bewilderment
+bier
+bigot
+bigoted
+biopsy
+birch
+birth
+bitch
+blackmail
+blackness
+blast
+bleeding
+blemish
+blight
+blindfold
+blob
+blockade
+bloodshed
+bloodthirsty
+bloody
+blues
+bomb
+bombard
+bombardment
+bomber
+bondage
+bottomless
+brawl
+brigade
+brimstone
+broke
+broken
+brutal
+brutality
+brute
+buck
+bug
+bugaboo
+bully
+bunker
+burdensome
+burglar
+burial
+buried
+burke
+busted
+butcher
+buzz
+cabal
+cadaver
+campaigning
+cancer
+cane
+cannibal
+cannon
+captive
+captor
+carcass
+carcinoma
+cardiomyopathy
+carnage
+carnivorous
+cartridge
+case
+cash
+casket
+casualty
+cataract
+catastrophe
+caution
+cautionary
+cautious
+cautiously
+cemetery
+censor
+chaff
+challenge
+change
+chaos
+chargeable
+chasm
+chicken
+chimera
+cholera
+clashing
+claw
+cleave
+cliff
+cloudiness
+cobra
+coerce
+coercion
+coffin
+coldness
+collapse
+collusion
+coma
+comatose
+combat
+combatant
+combative
+communism
+compassion
+concealed
+concealment
+concerned
+condemnation
+confession
+confessional
+confidence
+confine
+confined
+confinement
+conflagration
+conflict
+confusion
+conquest
+conspiracy
+conspirator
+conspire
+consternation
+constrain
+constraint
+contagion
+contagious
+contaminated
+contempt
+contentious
+contraband
+convict
+cop
+corrosive
+corrupting
+counsellor
+courageous
+court
+cove
+coward
+cowardice
+cowardly
+coy
+coyote
+cracked
+crash
+crazed
+crazy
+creature
+criminal
+criminality
+cringe
+cripple
+criticize
+crocodile
+cross
+crouch
+crouching
+crucifixion
+cruel
+cruelly
+cruelty
+crusade
+crushed
+crushing
+crypt
+cult
+cupping
+cur
+curse
+cursed
+cutter
+cutthroat
+cutting
+cyanide
+cyclone
+cyst
+daemon
+dagger
+damnation
+danger
+dangerous
+darken
+darkened
+darkness
+dart
+dashed
+dastardly
+deadly
+death
+debacle
+debauchery
+decay
+deceit
+decomposition
+defamation
+default
+defection
+defend
+defendant
+defense
+defenseless
+defiance
+deflation
+deformity
+defy
+degrading
+delay
+deleterious
+deluge
+delusion
+delusional
+demented
+dementia
+demise
+demon
+demonic
+demoralized
+dentistry
+denunciation
+dependence
+deplorable
+deport
+deportation
+depraved
+depreciated
+depreciation
+depress
+depressed
+deprivation
+deranged
+derogation
+derogatory
+descent
+desecration
+desert
+deserted
+desolation
+despair
+despairing
+despotic
+despotism
+destination
+destitute
+destroyed
+destroyer
+destroying
+destructive
+detainee
+deteriorate
+deterioration
+detonate
+devastate
+devastating
+devastation
+devil
+devilish
+diabolical
+diagnosis
+dictator
+dictatorship
+die
+difficult
+difficulty
+dike
+dinosaur
+dire
+disable
+disabled
+disallowed
+disappear
+disapprove
+disaster
+disastrous
+discipline
+discontent
+discontinuity
+discourage
+discrimination
+disease
+diseased
+disembodied
+disfigured
+disgust
+disgusting
+dishonor
+disinformation
+disintegrate
+dislocated
+dismal
+dismay
+dismemberment
+dismissal
+disorder
+displaced
+displeased
+dispossessed
+disreputable
+disrespectful
+disruption
+dissident
+dissolution
+distress
+distressed
+distressing
+distrust
+disturbance
+divorce
+dominant
+dominate
+domination
+dominion
+doom
+doomed
+doomsday
+doubt
+downfall
+dragon
+dread
+dreadful
+dreadfully
+drown
+dubious
+duel
+dungeon
+duress
+dwarfed
+dying
+earthquake
+edict
+eel
+elevation
+elf
+elimination
+emaciated
+embarrassment
+embolism
+emergency
+encroachment
+encumbrance
+endanger
+endangered
+endemic
+endless
+endocarditis
+enemy
+enforce
+enigmatic
+enmity
+enslaved
+entangled
+epidemic
+eradication
+erase
+eruption
+escape
+escaped
+ethereal
+euthanasia
+evacuate
+evade
+evasion
+eventuality
+eviction
+evil
+exacerbation
+examination
+excitation
+excite
+exclusion
+excruciating
+execution
+executioner
+exigent
+exile
+exorcism
+expel
+explode
+explosion
+explosive
+expose
+expulsion
+exterminate
+extermination
+extrajudicial
+failing
+failure
+fainting
+falter
+fanaticism
+fang
+fangs
+fatal
+fatality
+fear
+fearful
+fearfully
+fearing
+fearless
+feeling
+felon
+ferocious
+fever
+fiend
+fierce
+fight
+fire
+firearms
+fled
+flee
+flinch
+flog
+flood
+flounder
+flu
+fluctuation
+flying
+foe
+forbidding
+force
+forced
+forcibly
+foreboding
+foreclose
+foreigner
+forewarned
+forfeiture
+forgotten
+formidable
+fortress
+foul
+fragile
+frantic
+fraught
+freakish
+frenetic
+frenzied
+fret
+frigate
+fright
+frighten
+frightened
+frightful
+fugitive
+fury
+gallows
+gang
+gash
+gasping
+gent
+ghastly
+ghetto
+ghost
+ghostly
+giant
+gladiator
+glare
+gnome
+goblin
+god
+gonorrhea
+gore
+gory
+government
+graduation
+grave
+grenade
+grieve
+grievous
+grim
+grisly
+grizzly
+grope
+grounded
+growl
+growling
+guard
+guerilla
+guillotine
+gulp
+gun
+gunpowder
+hag
+hallucination
+halter
+halting
+hanging
+hangman
+harbinger
+hardened
+harm
+harmful
+harrowing
+harshness
+hate
+hateful
+hatred
+haunt
+haunted
+havoc
+hawk
+hazard
+hazardous
+haze
+hearing
+hearse
+heathen
+heft
+heighten
+hell
+hellish
+helmet
+helpless
+helplessness
+hemorrhage
+hesitation
+hide
+hideous
+hiding
+highest
+hiss
+holiness
+holocaust
+homeless
+homework
+homicidal
+homicide
+honest
+hood
+hooded
+hopeless
+hopelessness
+horrible
+horrid
+horrific
+horrified
+horrifying
+horror
+horrors
+hospital
+hostage
+hostile
+hostilities
+howl
+hunter
+hunting
+hurricane
+hurt
+hurtful
+hurting
+hydra
+hydrocephalus
+hypertrophy
+hysteria
+hysterical
+idolatry
+ill
+illegal
+illegality
+illegitimate
+illicit
+illness
+immerse
+immigrant
+imminent
+immoral
+impeach
+impending
+impermeable
+impotence
+imprisoned
+imprisonment
+incarceration
+incase
+incendiary
+incest
+incite
+incrimination
+incubus
+incurable
+incursion
+indefensible
+indict
+indictment
+indifference
+indoctrination
+indomitable
+ineptitude
+inequality
+infamous
+infant
+infanticide
+infarct
+infection
+infectious
+inferno
+infestation
+infidel
+infidelity
+infirmity
+inflation
+inflict
+infliction
+inhuman
+injection
+injure
+injured
+injurious
+injury
+inmate
+insane
+insanity
+insecure
+insecurity
+insidious
+insolvency
+insolvent
+instability
+instinctive
+insulting
+insurmountable
+intelligence
+intense
+intercede
+interrogate
+interrogation
+interviewer
+intimately
+intimidate
+intimidation
+intolerance
+intolerant
+intrigue
+intruder
+intrusion
+intrusive
+invade
+invader
+iris
+irrational
+irreconcilable
+irreparable
+isolated
+jail
+jarring
+jaundice
+jaws
+jealousy
+jeopardize
+jeopardy
+journey
+jungle
+kerosene
+khan
+kidnap
+kill
+killing
+knell
+lace
+lament
+landslide
+languishing
+lash
+lava
+lawlessness
+lawsuit
+lawyer
+laxative
+leeches
+legalized
+leprosy
+lethal
+leukemia
+libel
+lifeless
+lightning
+lines
+lion
+litigate
+lockup
+locust
+loneliness
+lonely
+loom
+lose
+loss
+loyal
+lunacy
+lunatic
+lynch
+mace
+mad
+madden
+madman
+madness
+mafia
+mage
+malaria
+malevolent
+malice
+malicious
+malignancy
+malignant
+mandamus
+mange
+mangle
+maniac
+manifestation
+manipulation
+manslaughter
+marry
+martyr
+martyrdom
+masochism
+massacre
+measles
+medical
+melee
+menace
+menacing
+mercenary
+merciless
+mighty
+military
+militia
+miscarriage
+misconception
+misery
+misfortune
+mishap
+mislead
+missile
+missing
+mistaken
+mistrust
+moan
+mob
+molestation
+monster
+monstrosity
+morbidity
+morgue
+mortality
+mortgage
+mortgagor
+mortification
+mortuary
+mournful
+mug
+mum
+murder
+murderer
+murderous
+musket
+mutilation
+mutiny
+muzzle
+mysterious
+nasty
+nefarious
+nervous
+nervousness
+nether
+neuralgia
+neurosis
+neurotic
+newcomer
+nightmare
+noncompliance
+notoriety
+noxious
+nurture
+obey
+obi
+obliging
+obligor
+obliterate
+obliterated
+obliteration
+oblivion
+obstacle
+obstruct
+occult
+odious
+offender
+offense
+ogre
+omen
+ominous
+omnipotence
+opera
+operation
+opium
+opponent
+opposed
+oppress
+oppression
+oppressive
+oppressor
+orc
+ordnance
+orphan
+outburst
+outcast
+outcry
+outpost
+outsider
+overpowering
+overt
+overthrow
+owing
+pain
+pained
+painful
+palsy
+pandemic
+panic
+parachute
+parade
+paralysis
+paralyzed
+paranoia
+parasite
+pare
+penal
+penalty
+penance
+penetration
+perdition
+peril
+perilous
+perish
+perishing
+perjury
+pernicious
+perpetrator
+persecute
+persecution
+perturbation
+perverse
+pessimism
+pessimist
+pest
+pestilence
+phalanx
+phantom
+picket
+pillage
+pinion
+pitfall
+plague
+plea
+plight
+plummet
+plunder
+plunge
+pneumonia
+poaching
+poison
+poisoned
+poisonous
+police
+policeman
+polio
+posse
+possessed
+possession
+poverty
+powerful
+powerfully
+powerless
+pray
+precarious
+precipice
+predicament
+prejudiced
+premeditated
+prevent
+prey
+prick
+prison
+prisoner
+probation
+problem
+procedure
+prognosis
+prohibited
+projectile
+projectiles
+prosecute
+protestant
+prowl
+psychosis
+puma
+punch
+punish
+punished
+punishing
+punishment
+punitive
+purgatory
+purge
+quail
+quake
+quandary
+quarantine
+quash
+quiver
+quivering
+rabble
+rabid
+radiation
+radioactive
+radon
+raging
+raid
+rampage
+ransom
+rape
+raptors
+rascal
+rat
+rating
+rattlesnake
+ravenous
+ravine
+raving
+razor
+react
+rebel
+rebellion
+recesses
+recession
+reckless
+recklessness
+refutation
+regiment
+regulatory
+reject
+rejection
+rejects
+rekindle
+relapse
+reluctant
+remains
+remove
+repellant
+repellent
+repent
+repression
+reprisal
+repulsion
+resection
+resign
+resistant
+resisting
+restrain
+restrained
+restriction
+retaliation
+retard
+reticent
+retirement
+retrenchment
+retribution
+revenge
+revoke
+revolting
+revolution
+revolver
+revulsion
+rheumatism
+rifle
+rigor
+riot
+riotous
+risk
+risky
+rob
+robber
+robbery
+rod
+romance
+rot
+rubble
+ruin
+ruined
+ruinous
+rule
+rupture
+ruthless
+saber
+sabotage
+sacrifices
+sag
+samurai
+sarcoma
+savage
+savagery
+scaffold
+scalpel
+scandal
+scapegoat
+scar
+scarce
+scarcity
+scare
+scarecrow
+schizophrenia
+scold
+scorpion
+scoundrel
+scourge
+scrapie
+scream
+screaming
+screech
+seclusion
+sectarian
+seize
+seizure
+senile
+senseless
+sentence
+sepsis
+seriousness
+serpent
+servile
+settlor
+shackle
+shady
+shaking
+shaky
+shame
+shanghai
+shank
+shatter
+shell
+shipwreck
+shiver
+shock
+shoot
+shooter
+shooting
+shortage
+shot
+shrapnel
+shriek
+shrill
+shrink
+shudder
+sickening
+sickness
+sin
+sinful
+sinister
+sinner
+siren
+skid
+slam
+slaughter
+slaughterhouse
+slaughtering
+slave
+slavery
+slayer
+sly
+smash
+smite
+smuggle
+smuggler
+smut
+snake
+snare
+sneak
+sneaking
+socialism
+socialist
+sorcery
+sordid
+sorrow
+sortie
+soulless
+soulmate
+spank
+spasm
+spear
+specter
+speculation
+spider
+spike
+spinster
+spook
+sprite
+spur
+squall
+squeamish
+stab
+stalk
+standoff
+startle
+starvation
+steal
+stealing
+stealthy
+stifled
+stigma
+stillness
+sting
+stingy
+stint
+stormy
+straits
+stranger
+strangle
+stretcher
+stripped
+stroke
+struggle
+stunned
+subjugation
+subordinate
+subversion
+subvert
+sufferer
+suffering
+suffocating
+suffocation
+suicidal
+suicide
+sultan
+sunk
+superstition
+superstitious
+suppress
+suppression
+supremacy
+surgery
+surprise
+surrender
+surveillance
+suspect
+suspense
+suspension
+suspicion
+swamp
+swampy
+swastika
+sweat
+swelling
+swerve
+swim
+sympathetic
+syncope
+synonymous
+syringe
+taboo
+tactics
+talons
+taunt
+tearful
+teasing
+tempest
+terminal
+terrible
+terror
+terrorism
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>terrorist
+terrorize
+theft
+theocratic
+thief
+thirteenth
+thorny
+thrash
+threat
+threaten
+threatening
+thresh
+thrill
+throb
+thug
+thumping
+thundering
+timid
+timidity
+toothache
+torment
+tornado
+torrent
+torture
+toughness
+towering
+toxin
+tract
+tragedy
+traitor
+tramp
+traumatic
+travesty
+treacherous
+treachery
+treason
+treat
+trembling
+tremor
+trepidation
+tribulation
+tribunal
+trickery
+troll
+troublesome
+tumor
+tumour
+tumult
+tumultuous
+turbulence
+turbulent
+turmoil
+typhoon
+tyrannical
+tyranny
+tyrant
+ugliness
+ulcer
+ultimatum
+unbridled
+uncanny
+uncertain
+undecided
+undesirable
+uneasy
+unemployed
+unequal
+unexpected
+unfriendly
+unhealthy
+unholy
+unjustifiable
+unkind
+unknown
+unlawful
+unlucky
+unnatural
+unrest
+unruly
+unsafe
+unsettled
+unspeakable
+unstable
+unsteady
+unsurpassed
+unthinkable
+upheaval
+uphill
+uprising
+urgency
+urgent
+usurped
+validity
+vampire
+vanished
+varicella
+veer
+vehement
+vendetta
+vengeful
+venom
+venomous
+verdict
+verge
+vermin
+vertigo
+victim
+victimized
+vigilant
+villain
+villainous
+violation
+violence
+violent
+violently
+viper
+virulence
+volatility
+volcano
+volunteer
+vulnerability
+vulture
+wail
+wan
+war
+warden
+ware
+warfare
+warlike
+warlock
+warn
+warned
+warning
+warrior
+wary
+wasting
+watch
+waver
+weakly
+weight
+weighty
+weirdo
+whimper
+whirlpool
+whirlwind
+wicked
+wilderness
+wildfire
+wimp
+wimpy
+wince
+witch
+witchcraft
+withstand
+woe
+worry
+worrying
+worse
+worship
+wound
+wrangling
+wrath
+wreck
+wrecked
+wrongly
+xenophobia
+yell
+yelp
+youth
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_nrc</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">kahma</span><span class="se">\\</span><span class="s1">OneDrive</span><span class="se">\\</span><span class="s1">Desktop</span><span class="se">\\</span><span class="s1">NRC-Sentiment-Emotion-Lexicons</span><span class="se">\\</span><span class="s1">NRC-Sentiment-Emotion-Lexicons</span><span class="se">\\</span><span class="s1">NRC-Emotion-Lexicon-v0.92</span><span class="se">\\</span><span class="s1">NRC-Emotion-Lexicon-Wordlevel-v0.92.txt&#39;</span>
+<span class="n">sentiment</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_nrc</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">sentiment</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Word&#39;</span><span class="p">,</span> <span class="s1">&#39;Emotion&#39;</span><span class="p">,</span> <span class="s1">&#39;isPresent&#39;</span><span class="p">]</span>
+<span class="n">sentiment_final</span> <span class="o">=</span> <span class="n">sentiment</span><span class="p">[</span><span class="n">sentiment</span><span class="p">[</span><span class="s1">&#39;isPresent&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">sentiment_final</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Word</th>
+      <th>Emotion</th>
+      <th>isPresent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>19</th>
+      <td>abacus</td>
+      <td>trust</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>abandon</td>
+      <td>fear</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>abandon</td>
+      <td>negative</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>abandon</td>
+      <td>sadness</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>abandoned</td>
+      <td>anger</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentiment_sample</span> <span class="o">=</span> <span class="n">sentiment_final</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Emotion&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sentiment_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              Word  isPresent
+Emotion                      
+anger         1247       1247
+anticipation   839        839
+disgust       1058       1058
+fear          1476       1476
+joy            689        689
+negative      3324       3324
+positive      2312       2312
+sadness       1191       1191
+surprise       534        534
+trust         1231       1231
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentiment_words</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Word&#39;</span><span class="p">,</span><span class="s1">&#39;Emotion&#39;</span><span class="p">])</span>
+<span class="c1">#temp = &#39;abacus&#39;</span>
+<span class="k">for</span> <span class="n">temp</span> <span class="ow">in</span> <span class="n">dialogue_merged</span><span class="p">:</span>
+    <span class="c1">#if sentiment_final.Word == temp:</span>
+<span class="c1">#print(temp,sentiment_final[[&#39;Word&#39;]],sentiment_final[&#39;Word&#39;]==temp)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">sentiment_final</span><span class="p">[</span><span class="n">sentiment_final</span><span class="p">[</span><span class="s1">&#39;Word&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">temp</span><span class="p">][[</span><span class="s1">&#39;Word&#39;</span><span class="p">,</span><span class="s1">&#39;Emotion&#39;</span><span class="p">]]</span>
+    <span class="n">sentiment_words</span> <span class="o">=</span> <span class="n">sentiment_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1">#print(sentiment_words.head())</span>
+        
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentiment_words</span> <span class="o">=</span> <span class="n">sentiment_words</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="c1">#sentiment_words = sentiment_words.drop([&#39;index&#39;])</span>
+<span class="c1">#print(sentiment_words.head())</span>
+<span class="c1">#print(sentiment_words.groupby([&#39;Emotion&#39;])[&#39;Word&#39;].count())</span>
+<span class="c1">#sentiment_words = sentiment_words.groupby([&#39;Emotion&#39;,&#39;Word&#39;]).count()#.sort_values(by=&#39;&#39;))</span>
+<span class="c1">#sentiment_words.columns = [&#39;Emotion&#39;,&#39;Word&#39;,&#39;Count&#39;]</span>
+<span class="c1">#sentiment_words = sentiment_words.reset_index()</span>
+<span class="n">sentiment_words</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>Word</th>
+      <th>Emotion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>76026</td>
+      <td>main</td>
+      <td>positive</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>34490</td>
+      <td>destroyed</td>
+      <td>anger</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>34493</td>
+      <td>destroyed</td>
+      <td>fear</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>34495</td>
+      <td>destroyed</td>
+      <td>negative</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>34497</td>
+      <td>destroyed</td>
+      <td>sadness</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentiment_final2</span> <span class="o">=</span> <span class="n">sentiment_words</span>
+<span class="n">sentiment_final2</span> <span class="o">=</span> <span class="n">sentiment_final2</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Emotion&#39;</span><span class="p">,</span><span class="s1">&#39;Word&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="c1">#.sort_values(by=&#39;&#39;))</span>
+<span class="n">sentiment_final2</span> <span class="o">=</span> <span class="n">sentiment_final2</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Emotion&#39;</span><span class="p">,</span><span class="s1">&#39;index&#39;</span><span class="p">],</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="c1">#.nlargest(10, &#39;index&#39;)</span>
+<span class="n">sentiment_final2</span> <span class="o">=</span> <span class="n">sentiment_final2</span><span class="p">[</span><span class="n">sentiment_final2</span><span class="o">.</span><span class="n">Word</span> <span class="o">!=</span> <span class="s1">&#39;ill&#39;</span><span class="p">]</span>
+<span class="n">sentiment_final3</span> <span class="o">=</span> <span class="n">sentiment_final2</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Emotion&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;index&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentiment_final3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Emotion</th>
+      <th>Word</th>
+      <th>index</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>anger</td>
+      <td>force</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>anger</td>
+      <td>attack</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>anger</td>
+      <td>rebel</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>anger</td>
+      <td>bad</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>anger</td>
+      <td>death</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>anger</td>
+      <td>blast</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>anger</td>
+      <td>hit</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>anger</td>
+      <td>battle</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>anger</td>
+      <td>powerful</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>anger</td>
+      <td>rebellion</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>anticipation</td>
+      <td>good</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>anticipation</td>
+      <td>ship</td>
+      <td>57</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>anticipation</td>
+      <td>time</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>anticipation</td>
+      <td>wait</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>anticipation</td>
+      <td>coming</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>anticipation</td>
+      <td>long</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>anticipation</td>
+      <td>star</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>anticipation</td>
+      <td>thought</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>anticipation</td>
+      <td>ready</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>anticipation</td>
+      <td>wont</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>disgust</td>
+      <td>lord</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>disgust</td>
+      <td>bad</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>disgust</td>
+      <td>death</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>disgust</td>
+      <td>boy</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>disgust</td>
+      <td>powerful</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>disgust</td>
+      <td>rebellion</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>disgust</td>
+      <td>hell</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>disgust</td>
+      <td>feeling</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>disgust</td>
+      <td>hate</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>disgust</td>
+      <td>garbage</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>sadness</td>
+      <td>dark</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>sadness</td>
+      <td>leave</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>sadness</td>
+      <td>bad</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>sadness</td>
+      <td>death</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>sadness</td>
+      <td>worry</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>sadness</td>
+      <td>die</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>sadness</td>
+      <td>lost</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>sadness</td>
+      <td>fault</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>sadness</td>
+      <td>hell</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>sadness</td>
+      <td>feeling</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>surprise</td>
+      <td>good</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>surprise</td>
+      <td>leave</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>surprise</td>
+      <td>hope</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>surprise</td>
+      <td>death</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>surprise</td>
+      <td>blast</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>surprise</td>
+      <td>young</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>surprise</td>
+      <td>feeling</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>surprise</td>
+      <td>luck</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>surprise</td>
+      <td>guess</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>surprise</td>
+      <td>reward</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>trust</td>
+      <td>sir</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>trust</td>
+      <td>good</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>trust</td>
+      <td>father</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>trust</td>
+      <td>lord</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>trust</td>
+      <td>system</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>trust</td>
+      <td>leader</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>trust</td>
+      <td>star</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>trust</td>
+      <td>found</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>trust</td>
+      <td>friend</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>trust</td>
+      <td>hope</td>
+      <td>21</td>
+    </tr>
+  </tbody>
+</table>
+<p>100 rows × 3 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentiment_final3</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Emotion&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Word&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Emotion</th>
+      <th>Word</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>anger</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>anticipation</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>disgust</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>fear</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>joy</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>negative</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>positive</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>sadness</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>surprise</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>trust</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>compute the most frequent words for each sentiment.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">sentiment_final3</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Emotion&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Word&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;barh&#39;</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">(</span><span class="n">stat</span> <span class="o">=</span> <span class="s2">&quot;identity&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">facet_wrap</span><span class="p">(</span><span class="s1">&#39;Emotion&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">coord_flip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Emotion
+anger           &lt;ggplot.facets.facet_wrap object at 0x000001D690DBBE10&gt;
+anticipation    &lt;ggplot.facets.facet_wrap object at 0x000001D690DBBE10&gt;
+disgust         &lt;ggplot.facets.facet_wrap object at 0x000001D690DBBE10&gt;
+fear            &lt;ggplot.facets.facet_wrap object at 0x000001D690DBBE10&gt;
+joy             &lt;ggplot.facets.facet_wrap object at 0x000001D690DBBE10&gt;
+negative        &lt;ggplot.facets.facet_wrap object at 0x000001D690DBBE10&gt;
+positive        &lt;ggplot.facets.facet_wrap object at 0x000001D690DBBE10&gt;
+sadness         &lt;ggplot.facets.facet_wrap object at 0x000001D690DBBE10&gt;
+surprise        &lt;ggplot.facets.facet_wrap object at 0x000001D690DBBE10&gt;
+trust           &lt;ggplot.facets.facet_wrap object at 0x000001D690DBBE10&gt;
+dtype: object
+</pre></div>
+</div>
+<img alt="../../_images/StarWars_SentimentAnalysis_51_1.png" src="../../_images/StarWars_SentimentAnalysis_51_1.png" />
+<img alt="../../_images/StarWars_SentimentAnalysis_51_2.png" src="../../_images/StarWars_SentimentAnalysis_51_2.png" />
+<img alt="../../_images/StarWars_SentimentAnalysis_51_3.png" src="../../_images/StarWars_SentimentAnalysis_51_3.png" />
+<img alt="../../_images/StarWars_SentimentAnalysis_51_4.png" src="../../_images/StarWars_SentimentAnalysis_51_4.png" />
+<img alt="../../_images/StarWars_SentimentAnalysis_51_5.png" src="../../_images/StarWars_SentimentAnalysis_51_5.png" />
+<img alt="../../_images/StarWars_SentimentAnalysis_51_6.png" src="../../_images/StarWars_SentimentAnalysis_51_6.png" />
+<img alt="../../_images/StarWars_SentimentAnalysis_51_7.png" src="../../_images/StarWars_SentimentAnalysis_51_7.png" />
+<img alt="../../_images/StarWars_SentimentAnalysis_51_8.png" src="../../_images/StarWars_SentimentAnalysis_51_8.png" />
+<img alt="../../_images/StarWars_SentimentAnalysis_51_9.png" src="../../_images/StarWars_SentimentAnalysis_51_9.png" />
+<img alt="../../_images/StarWars_SentimentAnalysis_51_10.png" src="../../_images/StarWars_SentimentAnalysis_51_10.png" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./data\script"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Orfeas, Harald, Mia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

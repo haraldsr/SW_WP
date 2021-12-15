@@ -1,0 +1,761 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Scripts Analysis &#8212; The Skywalker Saga</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Word clouds" href="Page_NLP.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">The Skywalker Saga</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to the Universe of the Star Wars trilogies
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Page_Data_vis.html">
+   The Star Wars data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Page_Network.html">
+   The Star Wars network
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Page_NLP.html">
+   Word clouds
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Movie Scripts Analysis
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Page_Script.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/MiaMiya/Star_Wars_Trilogies"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/MiaMiya/Star_Wars_Trilogies/issues/new?title=Issue%20on%20page%20%2FPage_Script.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/MiaMiya/Star_Wars_Trilogies/master?urlpath=tree/docs/Page_Script.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Movie Scripts Analysis
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#word-clouds">
+   Word clouds
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#word-clouds-for-anakin-darth-vader-based-on-movies-scripts">
+     Word clouds for Anakin/Darth Vader based on movies scripts
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#word-clouds-for-the-two-trilogies-based-on-movies-scripts">
+     Word clouds for the two trilogies based on movies scripts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sentiment-analysis">
+   Sentiment analysis
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#part-3-5-1-analysis-of-wikipage">
+     Part 3.5.1: Analysis of Wikipage
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analysis-of-movie-scipts">
+     Analysis of Movie Scipts
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#loading-the-scripts">
+       Loading the scripts
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#character-based-analysis">
+         Character based analysis
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#part-3-6-hidden-topic-modeling">
+     Part 3.6: Hidden topic modeling
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#part-3-6-1-movie-scipts">
+       Part 3.6.1: Movie Scipts
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="movie-scripts-analysis">
+<h1>Movie Scripts Analysis<a class="headerlink" href="#movie-scripts-analysis" title="Permalink to this headline">¶</a></h1>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="word-clouds">
+<h1>Word clouds<a class="headerlink" href="#word-clouds" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="word-clouds-for-anakin-darth-vader-based-on-movies-scripts">
+<h2>Word clouds for Anakin/Darth Vader based on movies scripts<a class="headerlink" href="#word-clouds-for-anakin-darth-vader-based-on-movies-scripts" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<p><img alt="alliance" src="_images/anakin_p.PNG" /></p>
+<p>We see on Anakin’s word cloud from the second movie, words that describe his love for Padme such as ‘alive’ and ‘nervous’. The word ‘mom’ shows us how much he misses his mother in the second movie.</p>
+<p>Also in the third movie, we can see more political words such as the ‘senate’, ‘Jedi council’, ‘war’, and ‘Chancellor’ (referring to Chancellor Palpatine).</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<p><img alt="alliance" src="_images/vader_o.PNG" /></p>
+<p>For the sixth movie, we can see important words for the movie plot such as ‘emperor’, ‘lightsaber’, ‘dark side’, and ‘sister’.</p>
+<p>Also in the fifth movie, we observe that the word ‘join’ appears (from the famous sentence “join the dark side”) and the most valuable word for the trilogy is ‘father’.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<p><img alt="alliance" src="_images/anakin_vader.PNG" /></p>
+<p>By comparing Anakin to Darth Vader we can see a lot of descriptive words for example ‘Padme’ and ‘right’ which stem from Anakin trying to question if what he does is right. Then words such as ‘sorry’ and ‘mother’ create a more emotional thus human aspect to the character, but for Darth Vader’s word cloud there are words such as ‘emperor’, ‘destiny’, ‘rebels fighter’, and ‘rebellion’. His descriptive words have changed a lot after his transformation to the dark side. Also the word ‘Luke’ appears on Darth Vader’s wordcloud which is his son (spoiler alert).</p>
+</div>
+<div class="section" id="word-clouds-for-the-two-trilogies-based-on-movies-scripts">
+<h2>Word clouds for the two trilogies based on movies scripts<a class="headerlink" href="#word-clouds-for-the-two-trilogies-based-on-movies-scripts" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<p><img alt="alliance" src="_images/o_p.PNG" /></p>
+<p>We observe for the first wordcloud some descriptive words (of the trilogy plot) such as ‘Chancellor’, ‘Padme’, and the battle of ‘Geonosis’.</p>
+<p>For the Prequel Trilogy we observe words related to ‘Han solo’ and Princess ‘Leia’ such as ‘princess’, ‘solo’ ,’millennium’ ,’Calrissian’ (Known friend/allie of Han solo), ‘Chewie’ (his companion) and ‘Jabba the Hut’.</p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="sentiment-analysis">
+<h1>Sentiment analysis<a class="headerlink" href="#sentiment-analysis" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="part-3-5-1-analysis-of-wikipage">
+<h2>Part 3.5.1: Analysis of Wikipage<a class="headerlink" href="#part-3-5-1-analysis-of-wikipage" title="Permalink to this headline">¶</a></h2>
+<p><a id='S_wiki.'></a></p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+</div>
+<div class="section" id="analysis-of-movie-scipts">
+<h2>Analysis of Movie Scipts<a class="headerlink" href="#analysis-of-movie-scipts" title="Permalink to this headline">¶</a></h2>
+<p><a id='S_script.'></a></p>
+<div class="section" id="loading-the-scripts">
+<h3>Loading the scripts<a class="headerlink" href="#loading-the-scripts" title="Permalink to this headline">¶</a></h3>
+<p>Original trilogy movie scripts are from <a class="reference external" href="https://github.com/kamran786/Star-Wars-Movie-Scripts-Text-Analysis">github</a>.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<p>Prequal movie scripts are from <a class="reference external" href="https://www.actorpoint.com/movie-scripts/scripts/star-wars-the-phantom-menace.html">script_I</a>, <a class="reference external" href="http://sellascript.com/Source/resources/screenplays/attackoftheclones.htm">script_II</a>, and <a class="reference external" href="https://www.actorpoint.com/movie-scripts/scripts/star-wars-revenge-of-the-sith.html">script_III</a>.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Character</th>
+      <th>Dialogue</th>
+      <th>Sentiment_LabMT</th>
+      <th>Sentiment_VADER</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>LUKE</td>
+      <td>Echo Three to Echo Seven. Han, old buddy, do y...</td>
+      <td>6.103333</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>HAN</td>
+      <td>Loud and clear, kid. What's up?</td>
+      <td>5.320000</td>
+      <td>0.3818</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>LUKE</td>
+      <td>Well, I finished my circle. I don't pick up an...</td>
+      <td>6.456667</td>
+      <td>0.2732</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>HAN</td>
+      <td>There isn't enough life on this ice cube to fi...</td>
+      <td>5.732500</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>LUKE</td>
+      <td>Right. I'll see you shortly. There's a meteori...</td>
+      <td>5.602500</td>
+      <td>0.0772</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/Page_Script_43_0.png" src="_images/Page_Script_43_0.png" />
+</div>
+</div>
+<p>We have plotted the sentiment scores as a time series based on when the dialogue appears in all the movies. This plot is created in chronological order meaning the prequel movies come before the original movies.<br />
+From the plot, we see that the sentiment varies a lot. We cannot see any clear indications of a large period of time where characters are happy or sad.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/Page_Script_45_0.png" src="_images/Page_Script_45_0.png" />
+</div>
+</div>
+<p>Above we have the distribution plot for the sentiment using the two methods. We see that for both methods we have scored across the whole range, but for both methods majority of the dialogues are categorized as neutral.</p>
+<div class="section" id="character-based-analysis">
+<h4>Character based analysis<a class="headerlink" href="#character-based-analysis" title="Permalink to this headline">¶</a></h4>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Dialogue</th>
+      <th>Sentiment_LabMT</th>
+      <th>Sentiment_VADER</th>
+    </tr>
+    <tr>
+      <th>Character</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ANAKIN</th>
+      <td>595</td>
+      <td>5.487858</td>
+      <td>0.045117</td>
+    </tr>
+    <tr>
+      <th>LUKE</th>
+      <td>494</td>
+      <td>5.600957</td>
+      <td>0.056700</td>
+    </tr>
+    <tr>
+      <th>HAN</th>
+      <td>459</td>
+      <td>5.656073</td>
+      <td>0.106785</td>
+    </tr>
+    <tr>
+      <th>OBI-WAN</th>
+      <td>406</td>
+      <td>5.473702</td>
+      <td>0.022823</td>
+    </tr>
+    <tr>
+      <th>THREEPIO</th>
+      <td>306</td>
+      <td>5.477057</td>
+      <td>0.056952</td>
+    </tr>
+    <tr>
+      <th>PADME</th>
+      <td>266</td>
+      <td>5.642045</td>
+      <td>0.045704</td>
+    </tr>
+    <tr>
+      <th>LEIA</th>
+      <td>227</td>
+      <td>5.550765</td>
+      <td>0.045899</td>
+    </tr>
+    <tr>
+      <th>YODA</th>
+      <td>148</td>
+      <td>5.436529</td>
+      <td>0.030401</td>
+    </tr>
+    <tr>
+      <th>QUI-GON</th>
+      <td>142</td>
+      <td>5.609359</td>
+      <td>0.056849</td>
+    </tr>
+    <tr>
+      <th>VADER</th>
+      <td>140</td>
+      <td>5.446784</td>
+      <td>0.033340</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We can see the top 10 characters with most dialogues for both methods have an average sentiment of around 5 and 0 respectively to LabMT and VADER, which are categorized as neutral.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<p>From the word cloud we found that Anakin Skywalker (Darth Vader) had an interesting shift in the type of word occurring based on the movies. We will see if we can see a similar tendency in the sentiment based on the dialogues spoken by him. Additionaly, as previously mentioned he shifts form the light side to the dark side, thus we whish to see if this can be seen in the sentiment.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/Page_Script_52_0.png" src="_images/Page_Script_52_0.png" />
+</div>
+</div>
+<p>From the plot above we see on the left-hand side, that there is no clear tendency using LabMT. For the VADER plot on the right, we see that in the second movie Anakin in the beginning primarily have a more positive sentiment. From the world clouds in section 4.2 positive words occurs such as ‘alive’ and ‘laughing’. We know form the movies that he is in love at that time.</p>
+<p>But from the plot we also see a tendency towards positive in the second half of the third movie. From watching the movie, we know that this is where he is questioning himself and turning to the dark side. This contradicts with the sentiment, since you would imagine someone in question of his existence will not use a lot of words which are positive. This could also mean that the reason for the positive tendency in the second movie could be a coincidence.</p>
+<p>We will look at Yoda’s sentiment timeseries plot to see if the sentiment also varies.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/Page_Script_54_0.png" src="_images/Page_Script_54_0.png" />
+</div>
+</div>
+<p>From the plot for Yoda, we again see that there are a lot of variation in the tendency which is unexpected, since Yoda is supposed to be a wise character. Additionally, as a jedi you are supposed to be neutral. These traits can not be seen in plot.</p>
+<p>From the sentiment analysis we found that the sentiment for the dialogues varies a lot. The sentiment analysis on the Star Wars scripts are not informative. We cannot see any overall tendency for the movies or characters based on the scripts. One of the reasons for this conclusion could be because the scripts are only part of a movie. How an actor acts out the dialogue will largely affect how the viewer perceive the emotions. If a character cries while saying ‘I am happy’ in the sentiment analysis will categorized it as being positive, but in reality, the actor and the screen is trying to express a sad emotion. The movie scripts are only a small part of expressing the emotions of characters, and thus if we wish to analysis the emotions characters are expressing, we need to take more into account than solely the dialogues.</p>
+</div>
+</div>
+</div>
+<div class="section" id="part-3-6-hidden-topic-modeling">
+<h2>Part 3.6: Hidden topic modeling<a class="headerlink" href="#part-3-6-hidden-topic-modeling" title="Permalink to this headline">¶</a></h2>
+<p><a id='htm.'></a></p>
+<div class="section" id="part-3-6-1-movie-scipts">
+<h3>Part 3.6.1: Movie Scipts<a class="headerlink" href="#part-3-6-1-movie-scipts" title="Permalink to this headline">¶</a></h3>
+<p><a id='htm_script.'></a></p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(0,
+  &#39;0.006*&quot;jedi&quot; + 0.005*&quot;master&quot; + 0.004*&quot;anakin&quot; + 0.003*&quot;know&quot; + 0.003*&quot;must&quot; + 0.003*&quot;council&quot; + 0.003*&quot;going&quot; + 0.003*&quot;right&quot;&#39;),
+ (1,
+  &#39;0.018*&quot;luke&quot; + 0.013*&quot;come&quot; + 0.012*&quot;know&quot; + 0.011*&quot;going&quot; + 0.011*&quot;right&quot; + 0.010*&quot;artoo&quot; + 0.009*&quot;take&quot; + 0.008*&quot;good&quot;&#39;),
+ (2,
+  &#39;0.025*&quot;chewie&quot; + 0.011*&quot;jabba&quot; + 0.011*&quot;solo&quot; + 0.008*&quot;rebel&quot; + 0.007*&quot;princess&quot; + 0.006*&quot;right&quot; + 0.006*&quot;imperial&quot; + 0.006*&quot;going&quot;&#39;),
+ (3,
+  &#39;0.004*&quot;jedi&quot; + 0.004*&quot;right&quot; + 0.003*&quot;going&quot; + 0.003*&quot;anakin&quot; + 0.003*&quot;know&quot; + 0.003*&quot;master&quot; + 0.003*&quot;ship&quot; + 0.003*&quot;think&quot;&#39;),
+ (4,
+  &#39;0.020*&quot;father&quot; + 0.012*&quot;know&quot; + 0.012*&quot;master&quot; + 0.012*&quot;right&quot; + 0.012*&quot;dark&quot; + 0.011*&quot;jedi&quot; + 0.011*&quot;well&quot; + 0.010*&quot;artoo&quot;&#39;),
+ (5,
+  &#39;0.003*&quot;right&quot; + 0.003*&quot;know&quot; + 0.003*&quot;master&quot; + 0.003*&quot;going&quot; + 0.003*&quot;jedi&quot; + 0.003*&quot;think&quot; + 0.002*&quot;look&quot; + 0.002*&quot;rebel&quot;&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<p>With this topic modelling we see some clear topic-movie correlation. For topic 0 we have ‘princess’ and ‘uncle’ which are specific to the 4th movie. For topic 4 we see ‘father’ and ‘sister’ which is also specific to movie 6. But we there are also problems, looking at topic 3 Luke and Anaking are only mentioned together in the 6th movie, but we already assigned topic 4 to movie 6. Additionaly the words have small weight and are thus not descriptive of the topic.</p>
+<p>When mapping the topics with PCA we also see this problem:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\miaha\anaconda3\lib\site-packages\pyLDAvis\_prepare.py:246: FutureWarning: In a future version of pandas all arguments of DataFrame.drop except for the argument &#39;labels&#39; will be keyword-only
+  default_term_info = default_term_info.sort_values(
+</pre></div>
+</div>
+<div class="output text_html">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.3.1/pyLDAvis/js/ldavis.v1.0.0.css">
+
+
+<div id="ldavis_el927219084931370561266117070"></div>
+<script type="text/javascript">
+
+var ldavis_el927219084931370561266117070_data = {"mdsDat": {"x": [0.11906155364309008, 0.10461563870430124, -0.0702851072628603, -0.04651110753019413, -0.06560667649549813, -0.0412743010588387], "y": [0.08419479890687762, -0.0811685762992255, 0.06687760548325793, -0.011388926214964677, -0.009155099258680221, -0.049359802617265275], "topics": [1, 2, 3, 4, 5, 6], "cluster": [1, 1, 1, 1, 1, 1], "Freq": [57.41872900937706, 24.89896674849648, 14.986955987780052, 2.6102916656020057, 0.07976267658235406, 0.005293912162054671]}, "tinfo": {"Term": ["jedi", "master", "know", "right", "going", "anakin", "must", "chewie", "father", "artoo", "good", "time", "think", "come", "like", "want", "look", "take", "well", "help", "lord", "force", "ship", "dark", "council", "chancellor", "back", "would", "need", "continuing", "soon", "longer", "strong", "quick", "fighter", "security", "perhaps", "coming", "speak", "quite", "shall", "small", "view", "destroyed", "name", "death", "enemy", "proceed", "escape", "every", "leia", "fight", "general", "energy", "return", "cruiser", "situation", "wonder", "shuttle", "failed", "luke", "hear", "become", "lord", "shield", "system", "understand", "around", "nothing", "star", "found", "emperor", "station", "young", "vader", "left", "great", "give", "first", "skywalker", "come", "even", "side", "take", "going", "know", "must", "artoo", "back", "time", "right", "ship", "help", "could", "good", "power", "well", "jedi", "friend", "need", "master", "thing", "force", "father", "commander", "three", "learned", "path", "dark", "might", "stand", "sister", "jump", "galaxy", "destroy", "mistake", "presence", "continuing", "hang", "hurt", "came", "quickly", "thanks", "possible", "talking", "stupid", "patience", "fear", "lightsaber", "talk", "next", "ground", "clear", "fire", "easy", "done", "able", "command", "moon", "really", "happened", "bounty", "would", "master", "jedi", "well", "know", "right", "like", "good", "artoo", "anakin", "look", "want", "going", "could", "think", "come", "must", "force", "back", "take", "asteroid", "unfortunate", "reach", "cargo", "deactivated", "fluent", "surprise", "ally", "supposed", "sweetheart", "carbon", "forgotten", "destiny", "falcon", "seven", "strike", "assault", "perfectly", "rendezvous", "field", "among", "following", "interpreter", "party", "passage", "ridge", "stuck", "terminal", "thermal", "solo", "chewie", "millennium", "bargain", "firepower", "pretty", "transport", "range", "jabba", "price", "princess", "imperial", "rebel", "somebody", "forever", "deflector", "operational", "gold", "wedge", "standing", "piece", "check", "getting", "lando", "fleet", "look", "like", "right", "going", "think", "come", "well", "ready", "ship", "good", "know", "back", "take", "panaka", "malastare", "heart", "binks", "clouded", "nooooo", "panic", "jira", "loony", "infection", "attacker", "pounded", "stole", "riaders", "servaunt", "yoken", "condone", "excellent", "autopilot", "oooops", "unto", "scary", "comen", "guds", "needen", "yous", "energize", "malia", "longo", "cheated", "mesa", "wesa", "slave", "overheated", "cont", "refuse", "rrevealed", "sebulba", "podracing", "boie", "hopen", "ainlee", "dealer", "arena", "berry", "doen", "starship", "valorum", "stairway", "naboo", "building", "queen", "coruscant", "watto", "yousa", "negotiation", "annie", "dissen", "padme", "cockpit", "uncle", "temple", "anakin", "pleased", "biggs", "bail", "geonosis", "jedi", "kenobi", "think", "ship", "like", "pilot", "look", "right", "master", "going", "rebel", "know", "chancellor", "want", "force", "back", "come", "take", "must", "need", "time", "good", "would", "sure", "well", "power", "help", "artoo", "teem", "podracing", "heart", "nubian", "overruled", "wude", "winner", "longo", "coona", "located", "dissen", "statement", "banished", "attacker", "condone", "jira", "angel", "riaders", "numb", "tested", "beestoo", "whats", "scovered", "goen", "bongo", "pawa", "overheated", "reveal", "outcropping", "oooooh", "mure", "cont", "handmaiden", "bayno", "seal", "hour", "negotiation", "hisen", "berry", "building", "mesa", "uncle", "slave", "annie", "blaster", "money", "biggs", "wesa", "aboard", "season", "space", "outskirt", "extinct", "precise", "watto", "block", "dantooine", "eisley", "harvest", "play", "thirty", "vaporators", "rebel", "number", "queen", "imperial", "pilot", "standing", "naboo", "anakin", "kenobi", "right", "master", "know", "think", "late", "jedi", "look", "princess", "going", "like", "chancellor", "must", "alderaan", "much", "time", "help", "sure", "well", "want", "back", "come", "take", "ship", "artoo", "force", "power", "arena", "building", "gungan", "invasion", "angrily", "numb", "believed", "flew", "shmi", "pitch", "disrespect", "touch", "dwell", "brainless", "ooooh", "nusen", "needen", "bolla", "negotiation", "cheelya", "guide", "binksss", "dissa", "farther", "surpirse", "blood", "increasing", "eopies", "panic", "darn", "room", "handmaiden", "tusken", "geonosis", "cockpit", "apartment", "tipoca", "homestead", "corridor", "annie", "hanger", "gunship", "dawn", "naboo", "mesa", "coruscant", "temple", "sunset", "house", "huge", "grateful", "cityscape", "huttese", "jango", "ledge", "sola", "afternoon", "cont", "army", "night", "tatooine", "council", "padme", "anakin", "handle", "jedi", "master", "chancellor", "continuing", "late", "kenobi", "must", "sorry", "know", "want", "going", "right", "good", "like", "time", "senate", "think", "artoo", "come", "help", "would", "take", "look", "force", "well"], "Freq": [138.0, 140.0, 199.0, 189.0, 176.0, 66.0, 123.0, 103.0, 97.0, 164.0, 149.0, 109.0, 96.0, 186.0, 97.0, 73.0, 94.0, 140.0, 151.0, 97.0, 88.0, 91.0, 111.0, 57.0, 28.0, 35.0, 122.0, 72.0, 74.0, 32.0, 31.97239481843631, 23.28421877917189, 41.950798650698346, 13.364266458320415, 40.83122172496343, 16.433932632306274, 16.22349626428715, 55.7764691730719, 15.022742330813312, 32.83754681479777, 16.98451832373763, 19.276573817001456, 11.970153949299183, 15.53352727459368, 10.740151389778237, 37.073108709590116, 9.410150801769648, 7.87232233528471, 19.673231943343538, 12.309614621307524, 65.46215041799732, 16.999192189168472, 49.87302915414685, 16.248322020339906, 14.110434230754528, 11.327333439855764, 9.031403329514147, 15.523008187927998, 22.31327366381884, 9.13215226755843, 198.23339399003044, 22.152924614974477, 24.872990932075542, 79.47193227437305, 70.21498862192514, 60.12887310310717, 24.48583416218786, 41.40946528311039, 47.24261457700599, 50.58173022437083, 34.26673480473371, 61.63057024122974, 36.87853546477682, 33.381233286444775, 83.95301999441922, 24.597202562286956, 40.41516700760331, 40.918840545650156, 24.726412370159878, 46.415724662520404, 138.27781709039056, 28.208615040588192, 70.80753884945918, 103.12634565324457, 123.96769174055177, 127.2693660971974, 86.41861564146318, 108.05579880135365, 84.41080800331467, 76.67645481682247, 114.84770077725963, 76.79754057104877, 68.48704281555945, 76.05843719308997, 90.38731114092839, 61.727484585294434, 85.51956725736562, 81.00578003080561, 61.62447148340932, 55.35890755430032, 75.36638573171574, 56.13058338131835, 59.83957852589544, 94.31052868438793, 25.45618620210718, 23.512346641599613, 14.20158946326218, 13.055064004896007, 54.938225969322495, 33.66991595906815, 20.45469050386672, 18.066668899497557, 12.372464047029926, 16.91632632142408, 24.791081743546194, 9.36721065978225, 11.594404140225054, 30.60727244148674, 14.438556122458781, 8.314862492346988, 12.372449721811625, 13.767274188990422, 15.203927191668503, 11.101230951713633, 13.028495132706981, 8.697246095427657, 13.75275833509195, 15.19855192898599, 7.759407111452013, 9.758064323668401, 11.544413536113762, 7.429291271222573, 17.735796026577898, 27.43355118119875, 27.79271966608265, 29.98669516916499, 15.360607613926765, 22.505748813658524, 19.217630767777585, 23.833125745316355, 18.325365812917024, 14.28801240333273, 38.59767424901361, 56.64967081915125, 51.88608614257539, 50.72388338568848, 58.206341602695645, 54.966334251508954, 37.47383663061674, 46.533144354055175, 47.7953018726078, 28.503979978009717, 29.902789059755953, 25.936131704427357, 33.77434018884381, 28.928418565232814, 27.31213503863827, 31.98814855379976, 26.508648971288853, 24.844290012075884, 25.683509785507415, 24.92159109390825, 11.291471493140428, 6.664880451248788, 6.023524747335599, 4.966396590277873, 4.966396590277873, 4.966396590277873, 5.405601027036894, 4.8101104065403035, 4.8101104065403035, 4.8101104065403035, 4.336590729171264, 4.336590729171264, 14.387233959676438, 9.126963231375301, 6.476253248459976, 6.836980968809958, 3.729883558773616, 3.729883558773616, 3.729883558773616, 11.430005932950856, 3.2679133925764234, 3.2679133925764234, 3.2679133925764234, 3.2679133925764234, 3.2679133925764234, 3.2679133925764234, 3.2679133925764234, 3.2679133925764234, 3.2679133925764234, 31.982368027581977, 71.71625484845053, 6.0208703429417705, 5.25003714374532, 5.25003714374532, 11.279090905330532, 11.123290898109873, 10.663615312622438, 32.625585528879846, 6.060255946967237, 20.030672804093772, 17.346012710408207, 22.221035309554907, 11.113700684933871, 7.755939484262303, 9.669028823107753, 10.084255405483644, 12.188185277318357, 8.224356961281636, 10.43828742059732, 6.245308127346569, 7.564283129832659, 9.369149443359923, 12.440153387353998, 10.548966532739682, 16.2012480856474, 16.237221168281998, 17.792167547877604, 17.079907675022728, 13.925286676275743, 15.16832661093779, 13.796782197295768, 9.703376232286763, 11.574519083707305, 11.795781797189251, 12.207932135792383, 11.365611753795632, 11.170885125018403, 0.13289961724198787, 0.16067308472387, 0.14065934730450774, 0.1858856551499085, 0.12547448291251195, 0.11233586398921692, 0.11212398897764694, 0.11159437004005307, 0.11189106003751204, 0.11257177484721785, 0.12363626412070179, 0.11165996501296543, 0.11214560607714058, 0.1112451968441241, 0.111135234110227, 0.11177807928504835, 0.12401738643662384, 0.11155647152460817, 0.1267986999297893, 0.11229849254400015, 0.11148970688899774, 0.11092840597659491, 0.15171560561826464, 0.12398037599841265, 0.11064693603449083, 0.13695375479511743, 0.11116688720447551, 0.11189568092718336, 0.1095189985261428, 0.12370281937224897, 0.3812181127410544, 0.26638042688238556, 0.14696898442704762, 0.12227198976608625, 0.7450661856853881, 0.1370249020557755, 0.12363271181176697, 0.14782091763935593, 0.13228447574477406, 0.13591326040365895, 0.1230866237345789, 0.1361991201909508, 0.1236515563774578, 0.25404227601268453, 0.13352724958159443, 0.13511929047616522, 0.5431724690888189, 0.12303534629950752, 0.133362514864812, 0.5778761591760987, 0.30490591041400905, 0.36854113513620407, 0.35370412265449686, 0.19327551187479997, 0.25671655814883815, 0.1844467534271012, 0.48829663170813203, 0.14893973611074324, 0.8546750749559182, 0.26356535201405906, 0.6182104610889987, 0.5046225237224978, 1.6056618910549223, 0.19964561045063295, 0.4225461080972105, 0.19011716266501555, 0.40306391739285186, 2.000282403318103, 0.8234947554818963, 1.4452638792290176, 1.5474032158681064, 1.4165443567883345, 0.5328439720177339, 1.38248701364383, 1.8604120007235712, 1.5793856640279478, 1.6901473497492296, 0.7812755926720664, 1.579816099900831, 0.7798875929370447, 0.95888867120734, 1.0364803401232519, 1.1485112687150025, 1.2345170001111732, 1.1234863786110207, 1.06695868869508, 0.8997717235251979, 0.9976632495728079, 1.051713680535956, 0.8480867259847968, 0.8094279586667162, 0.9639401122737814, 0.8385474191084518, 0.8285810842653563, 0.8597433245085391, 0.004374177517012866, 0.004338183740645745, 0.004258041858150502, 0.0038445537990358367, 0.0034364507745750276, 0.003849634811330097, 0.003433163891328832, 0.0034121770822329043, 0.0034184174831336056, 0.0034195391447273535, 0.005060736341508721, 0.0034034707467072377, 0.003801309817457514, 0.0037694871925639186, 0.0037740431154417507, 0.0033614558714898063, 0.003783943477825278, 0.0033670928608132257, 0.0033363252685202015, 0.0041325040099728025, 0.003366440911558795, 0.0033690156147057346, 0.0033638223038766164, 0.00455180114653896, 0.00377713452422452, 0.003350698377852992, 0.00372988618428142, 0.0033585414046028252, 0.003363362519698534, 0.003343833605923513, 0.003751736964030596, 0.023332225551035285, 0.0037054271662629104, 0.003682997685026637, 0.004427391137477555, 0.009176284375847001, 0.006215328101692641, 0.0040178602228053495, 0.00402893652073071, 0.010350130150052634, 0.008759929063767671, 0.027439383186000976, 0.0042832757139969506, 0.017640305697134963, 0.020284894274136555, 0.014136791737798247, 0.01824662777003933, 0.006539131770984606, 0.013650250062058507, 0.013650250062058507, 0.01991095118434986, 0.006024689755916506, 0.007742777031449951, 0.010585997668402479, 0.005638449866249966, 0.009053872354077685, 0.009053872354077685, 0.009053872354077685, 0.009053872354077685, 0.009053872354077685, 0.009053872354077685, 0.009053872354077685, 0.03510057367718309, 0.011723632570448653, 0.009073730441554097, 0.02590759057539046, 0.01748030256816872, 0.019779032837885145, 0.011487747402034391, 0.03502326992504622, 0.024257120696641418, 0.05304345619363801, 0.046454355325280305, 0.051336779684750644, 0.037939342967889464, 0.017760345550246533, 0.04297528052763963, 0.03631918707477791, 0.02284339995695989, 0.04499865920240048, 0.03469470691588401, 0.022205800204900823, 0.033558833490266726, 0.019645580700822528, 0.02330023304427167, 0.02831596834028928, 0.026790822743938486, 0.02381143362500945, 0.027929583720094516, 0.024270746546371923, 0.0265450879570759, 0.028081661970137187, 0.025857194346458452, 0.024808725804844316, 0.02527281306863179, 0.023288178050274347, 0.022954095865968704, 0.0007005107939966083, 0.0009978085642806979, 0.00024328362855253343, 0.0003008415200078195, 0.0003094449034710968, 0.00023878185336817818, 0.00023874807171380045, 0.00023914661323404257, 0.00023747766479117246, 0.0002394164271757695, 0.00023798173920395912, 0.0002376990686118015, 0.00023866801783236003, 0.0002380040113740105, 0.00023763456571300053, 0.00023749897051597506, 0.00023674883328560567, 0.00023679668696853, 0.00048140321799243187, 0.00023716430224081123, 0.00023638493736322124, 0.00023567199363181996, 0.0002637060077546382, 0.00023605264127184988, 0.00023770745911373407, 0.0002623874835731089, 0.00023629360828721175, 0.00023645141708184927, 0.00023491244088182992, 0.00023701896937574883, 0.0011903009117165912, 0.0002613133236084221, 0.0003618677931005407, 0.001854047542725306, 0.0007741569091478675, 0.0008795675610115559, 0.0008282790731006394, 0.0007257022144236848, 0.0006744137265127682, 0.0015795378485381206, 0.0004035829379530432, 0.000571836926408253, 0.0005205485556422151, 0.0014607094808474792, 0.00066952726219007, 0.0009084298919281257, 0.001846907796661973, 0.0004692600677312985, 0.00041797166767904085, 0.0003140696075624746, 0.0003166595051118806, 0.00036668323834056357, 0.00036668323834056357, 0.00036668323834056357, 0.00036668323834056357, 0.00036668323834056357, 0.0009460231477945917, 0.0011857298014071912, 0.000994146498229542, 0.0013079771595258113, 0.0016818378938668495, 0.0029670037826097857, 0.0020302498404824398, 0.004511857961204654, 0.0005887384723535118, 0.005877216665214069, 0.004920353867509188, 0.002162333971205315, 0.0019825746863531652, 0.0013620242921838143, 0.0018178539924412667, 0.0030451274678848514, 0.0016304916535307635, 0.003265778515523765, 0.00221205096056928, 0.0028287803230871607, 0.0026250829508645004, 0.0023509723692788404, 0.0020294370893144376, 0.0020513944910769077, 0.001443604805682659, 0.0019386379767359196, 0.0021087554180618706, 0.0018672751909866662, 0.0015934882807006878, 0.0015323153422199098, 0.0015805871152160965, 0.0015411743065221592, 0.0015309484957759416, 0.0015222313939217249], "Total": [138.0, 140.0, 199.0, 189.0, 176.0, 66.0, 123.0, 103.0, 97.0, 164.0, 149.0, 109.0, 96.0, 186.0, 97.0, 73.0, 94.0, 140.0, 151.0, 97.0, 88.0, 91.0, 111.0, 57.0, 28.0, 35.0, 122.0, 72.0, 74.0, 32.0, 33.12739001360547, 24.167524411770156, 43.774610333629155, 13.96333058242361, 42.69283511164102, 17.21692310693641, 17.03715194171989, 58.59186541977928, 15.797295258054177, 34.56224102226581, 17.887242702115216, 20.309525800541188, 12.648955130760095, 16.519909820127786, 11.422661394316778, 39.4657960015974, 10.026985191173859, 8.390831420372978, 20.98104624695063, 13.225531462459662, 70.40381899801388, 18.29729267485713, 53.68718606770707, 17.517216601281923, 15.213767658330449, 12.215552267460838, 9.747956628904916, 16.75786700382078, 24.100225457043063, 9.867357629027396, 216.55749440117359, 23.99405912017642, 26.97886430970871, 88.07533777212579, 77.63109401146271, 66.30591076472088, 26.575308165096715, 45.53556306982184, 52.18060336060579, 56.29476965744128, 37.71604316889779, 69.62104941305564, 40.80530580240429, 36.909255060564696, 99.96671923743084, 26.82018311527002, 45.74925079303025, 47.12126935519425, 27.100248713535553, 54.63907882618307, 186.6987581924004, 31.392681294274183, 89.4292002391354, 140.36974603224394, 176.55991439369302, 199.31805849378657, 123.96926420282784, 164.38171434633898, 122.63622822225065, 109.56269261856944, 189.52228311651427, 111.4475322016787, 97.17898528926267, 113.5244724209015, 149.78843354561326, 86.85711621160642, 151.03362476773765, 138.74495591329654, 87.99934159343898, 74.12834392312878, 140.82965909148768, 76.39269828609318, 91.28366833412413, 97.22546171289737, 26.50008598405579, 24.484319187900354, 14.80029226907391, 13.658328584305652, 57.49152795952306, 35.24223000500205, 21.410816866432196, 19.024703664688438, 13.051356982728628, 17.847536057726895, 26.16696125278944, 9.896874252110615, 12.25378829773009, 32.36451317672201, 15.279371723880953, 8.806998806155434, 13.116184241579667, 14.595741250609706, 16.122316752032983, 11.773651834760882, 13.842521811464385, 9.260569465855763, 14.653276174324365, 16.200449406226184, 8.281494953992313, 10.416822034198988, 12.336749639709742, 7.951602616288511, 19.021029646038464, 29.487193279933486, 29.888809588439102, 32.298993134854385, 16.497772838414907, 24.447592071281733, 20.907257296153976, 26.230641926405934, 19.930868168033932, 15.476460451079483, 72.25735357953161, 140.82965909148768, 138.74495591329654, 151.03362476773765, 199.31805849378657, 189.52228311651427, 97.91892598422771, 149.78843354561326, 164.38171434633898, 66.63985776564469, 94.70022278159902, 73.25857794453545, 176.55991439369302, 113.5244724209015, 96.22702183893219, 186.6987581924004, 123.96926420282784, 91.28366833412413, 122.63622822225065, 140.36974603224394, 14.328600866239286, 8.561009712335231, 7.852116276362919, 6.525027787995237, 6.525027787995237, 6.525027787995237, 7.134540373617219, 6.411576911340265, 6.411576911340265, 6.411576911340265, 5.812342694459944, 5.812342694459944, 19.42312674963124, 12.355104933618712, 8.795084993494035, 9.32489661714914, 5.092072965023022, 5.092072965023022, 5.092072965023022, 15.690127590848814, 4.489046595781307, 4.489046595781307, 4.489046595781307, 4.489046595781307, 4.489046595781307, 4.489046595781307, 4.489046595781307, 4.489046595781307, 4.489046595781307, 43.94595384135638, 103.30469719463052, 8.36680830590714, 7.277063269591604, 7.277063269591604, 16.07060271615668, 15.857121741925562, 15.253900957057851, 49.03495547078808, 8.504424893055464, 29.95751737138223, 26.362938341866734, 35.05611884457131, 16.58754289807046, 11.197591593038165, 14.500675314237156, 15.43699607704577, 19.359334360528354, 12.41380770243508, 16.746374198297183, 9.122833748889265, 12.947685070854137, 18.44517590500885, 35.29508449476245, 30.4367601705441, 94.70022278159902, 97.91892598422771, 189.52228311651427, 176.55991439369302, 96.22702183893219, 186.6987581924004, 151.03362476773765, 37.62483045547305, 111.4475322016787, 149.78843354561326, 199.31805849378657, 122.63622822225065, 140.36974603224394, 0.6892276348964492, 0.8408225569523267, 0.7512130042864853, 0.9966839984285067, 0.6884723743281768, 0.616815347026667, 0.6161410903560981, 0.6136191190217376, 0.6166350751669443, 0.6219631275432606, 0.6833297092727603, 0.6175103316917314, 0.6203216832638125, 0.6161224749021221, 0.6157552263251781, 0.6195980273327255, 0.6875133454104326, 0.6186554646828448, 0.703184787893545, 0.6229272811064795, 0.6193910387124163, 0.6167813289028027, 0.8439332890189879, 0.6897015568431616, 0.6161205402405686, 0.7628053011175577, 0.6199585744164959, 0.6242131143836148, 0.6125178631486944, 0.691865961596412, 2.1378142663283732, 1.5516300848000244, 0.8360450831366825, 0.6866876771385261, 4.983713300695775, 0.7782306398248466, 0.6950107988059837, 0.8500176119861662, 0.7502466624148317, 0.7739352485668388, 0.6917976061914545, 0.7800671752464127, 0.6963493123206715, 1.648575459813928, 0.7655058398612642, 0.7789087584841926, 4.437330487619195, 0.6938919444139541, 0.7715449733200055, 5.459694215697019, 2.465985342007828, 3.2212781321895707, 3.104578373521616, 1.3222272566175113, 2.0549048325242456, 1.2535054485977593, 5.719659776795814, 0.9132299839088921, 16.139174369382086, 2.366832917658998, 9.92483641660188, 7.4164867594435915, 66.63985776564469, 1.5714030275048843, 6.408326879254151, 1.4426189781293546, 5.997200555836696, 138.74495591329654, 29.316914427680008, 96.22702183893219, 111.4475322016787, 97.91892598422771, 12.277983973008327, 94.70022278159902, 189.52228311651427, 140.82965909148768, 176.55991439369302, 35.05611884457131, 199.31805849378657, 35.01910622498986, 73.25857794453545, 91.28366833412413, 122.63622822225065, 186.6987581924004, 140.36974603224394, 123.96926420282784, 74.12834392312878, 109.56269261856944, 149.78843354561326, 72.25735357953161, 60.84851782590315, 151.03362476773765, 86.85711621160642, 97.17898528926267, 164.38171434633898, 0.7544380056785612, 0.7502466624148317, 0.7512130042864853, 0.6842026332753279, 0.6132662218068354, 0.6872239770888364, 0.6156257255851022, 0.6125178631486944, 0.6158837761321636, 0.6161211551401229, 0.9132299839088921, 0.6150940002685998, 0.6883450400860193, 0.6833297092727603, 0.6875133454104326, 0.6136191190217376, 0.6912814107020563, 0.6161224749021221, 0.6108599437297002, 0.757435848071222, 0.6170590205626479, 0.6184404997281724, 0.6177302415172472, 0.8362518965823367, 0.6952012431222114, 0.6167617886592206, 0.6866876771385261, 0.6184609854130636, 0.6193611735778772, 0.6162012685663031, 0.6920419289718948, 4.983713300695775, 0.6876094767766363, 0.6863364696689948, 0.847821739314262, 1.9605260190591018, 1.2535054485977593, 0.7614476011777531, 0.7655058398612642, 2.465985342007828, 2.1378142663283732, 9.92483641660188, 0.8360450831366825, 5.719659776795814, 7.095149309865386, 4.415847308511268, 6.408326879254151, 1.5516300848000244, 4.650071816104974, 4.650071816104974, 8.427168573337386, 1.4024837463691182, 2.062036970502313, 3.4779020421106925, 1.3222272566175113, 2.8918168271681397, 2.8918168271681397, 2.8918168271681397, 2.8918168271681397, 2.8918168271681397, 2.8918168271681397, 2.8918168271681397, 35.05611884457131, 5.146742311592155, 3.2212781321895707, 26.362938341866734, 12.277983973008327, 16.746374198297183, 5.459694215697019, 66.63985776564469, 29.316914427680008, 189.52228311651427, 140.82965909148768, 199.31805849378657, 96.22702183893219, 15.129331593627384, 138.74495591329654, 94.70022278159902, 29.95751737138223, 176.55991439369302, 97.91892598422771, 35.01910622498986, 123.96926420282784, 24.506217703040164, 50.58099305039163, 109.56269261856944, 97.17898528926267, 60.84851782590315, 151.03362476773765, 73.25857794453545, 122.63622822225065, 186.6987581924004, 140.36974603224394, 111.4475322016787, 164.38171434633898, 91.28366833412413, 86.85711621160642, 1.648575459813928, 2.465985342007828, 0.6134097050666112, 0.7665073346218315, 0.7899406161245888, 0.6108599437297002, 0.6152599522960833, 0.6167858878128679, 0.6142592783863857, 0.6195977598923907, 0.6163739563758477, 0.6160029125628486, 0.618872594287021, 0.6184303123647013, 0.617886010494638, 0.6178146150187065, 0.6161205402405686, 0.6163760234769448, 1.2535054485977593, 0.6189999849959039, 0.6170406596102919, 0.6152134064318001, 0.6887051995927753, 0.61681614378817, 0.6213557515740596, 0.6862076860653494, 0.6181417298704769, 0.6188674704859594, 0.6161410903560981, 0.6221426859443744, 3.234016071341097, 0.6876094767766363, 0.9715360752746119, 5.997200555836696, 2.366832917658998, 2.7614273072532387, 2.591123279552404, 2.2505154762766746, 2.080211917264721, 5.719659776795814, 1.1494093642896464, 1.7396038606135216, 1.5692999694566205, 5.459694215697019, 2.1378142663283732, 3.104578373521616, 7.4164867594435915, 1.3989963027624712, 1.2286923984516986, 0.8657692285769881, 0.8752665313565476, 1.0583884701176172, 1.0583884701176172, 1.0583884701176172, 1.0583884701176172, 1.0583884701176172, 3.685516612287548, 4.983713300695775, 4.380331786185453, 6.980289988888032, 10.253252363822513, 28.16166092569604, 16.139174369382086, 66.63985776564469, 2.3359007877888605, 138.74495591329654, 140.82965909148768, 35.01910622498986, 32.36451317672201, 15.129331593627384, 29.316914427680008, 123.96926420282784, 28.55749879929403, 199.31805849378657, 73.25857794453545, 176.55991439369302, 189.52228311651427, 149.78843354561326, 97.91892598422771, 109.56269261856944, 24.26038619098651, 96.22702183893219, 164.38171434633898, 186.6987581924004, 97.17898528926267, 72.25735357953161, 140.36974603224394, 94.70022278159902, 91.28366833412413, 151.03362476773765], "Category": ["Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6"], "logprob": [30.0, 29.0, 28.0, 27.0, 26.0, 25.0, 24.0, 23.0, 22.0, 21.0, 20.0, 19.0, 18.0, 17.0, 16.0, 15.0, 14.0, 13.0, 12.0, 11.0, 10.0, 9.0, 8.0, 7.0, 6.0, 5.0, 4.0, 3.0, 2.0, 1.0, -5.8329, -6.15, -5.5613, -6.7052, -5.5884, -6.4985, -6.5114, -5.2765, -6.5883, -5.8062, -6.4655, -6.3389, -6.8154, -6.5548, -6.9238, -5.6849, -7.056, -7.2345, -6.3186, -6.7874, -5.1163, -6.4646, -5.3883, -6.5098, -6.6509, -6.8706, -7.0971, -6.5555, -6.1926, -7.086, -4.0084, -6.1998, -6.084, -4.9224, -5.0463, -5.2013, -6.0997, -5.5743, -5.4425, -5.3742, -5.7636, -5.1767, -5.6902, -5.7898, -4.8676, -6.0952, -5.5986, -5.5862, -6.0899, -5.4602, -4.3686, -5.9582, -5.0379, -4.6619, -4.4778, -4.4515, -4.8386, -4.6152, -4.8621, -4.9582, -4.5542, -4.9566, -5.0712, -4.9663, -4.7937, -5.1751, -4.8491, -4.9033, -5.1768, -5.284, -4.9755, -5.2701, -5.2061, -3.9157, -5.2253, -5.3047, -5.8089, -5.8931, -4.4561, -4.9457, -5.4441, -5.5682, -5.9468, -5.634, -5.2518, -6.2251, -6.0117, -5.041, -5.7924, -6.3442, -5.9468, -5.84, -5.7407, -6.0552, -5.8951, -6.2993, -5.841, -5.7411, -6.4134, -6.1842, -6.0161, -6.4568, -5.5867, -5.1505, -5.1375, -5.0615, -5.7305, -5.3485, -5.5064, -5.2912, -5.554, -5.8029, -4.8091, -4.4254, -4.5132, -4.5359, -4.3983, -4.4556, -4.8386, -4.6221, -4.5953, -5.1122, -5.0643, -5.2066, -4.9426, -5.0974, -5.1549, -4.9969, -5.1848, -5.2496, -5.2164, -5.2465, -5.5306, -6.0578, -6.159, -6.3519, -6.3519, -6.3519, -6.2672, -6.3839, -6.3839, -6.3839, -6.4875, -6.4875, -5.2883, -5.7434, -6.0865, -6.0323, -6.6382, -6.6382, -6.6382, -5.5184, -6.7705, -6.7705, -6.7705, -6.7705, -6.7705, -6.7705, -6.7705, -6.7705, -6.7705, -4.4894, -3.6819, -6.1594, -6.2964, -6.2964, -5.5317, -5.5456, -5.5878, -4.4695, -6.1529, -4.9574, -5.1013, -4.8536, -5.5464, -5.9062, -5.6857, -5.6436, -5.4542, -5.8475, -5.6091, -6.1228, -5.9312, -5.7172, -5.4337, -5.5986, -5.1695, -5.1673, -5.0759, -5.1167, -5.3209, -5.2354, -5.3302, -5.6822, -5.5058, -5.4869, -5.4525, -5.524, -5.5413, -8.2251, -8.0353, -8.1683, -7.8895, -8.2826, -8.3932, -8.3951, -8.3998, -8.3971, -8.3911, -8.2973, -8.3992, -8.3949, -8.4029, -8.4039, -8.3981, -8.2942, -8.4001, -8.2721, -8.3935, -8.4007, -8.4058, -8.0927, -8.2945, -8.4083, -8.195, -8.4036, -8.3971, -8.4186, -8.2968, -7.1713, -7.5297, -8.1244, -8.3084, -6.5012, -8.1945, -8.2973, -8.1187, -8.2297, -8.2026, -8.3018, -8.2005, -8.2972, -7.5772, -8.2204, -8.2085, -6.8172, -8.3022, -8.2216, -6.7553, -7.3947, -7.2051, -7.2462, -7.8505, -7.5667, -7.8973, -6.9237, -8.1111, -6.3639, -7.5404, -6.6878, -6.8909, -5.7334, -7.8181, -7.0684, -7.867, -7.1156, -5.5136, -6.4011, -5.8386, -5.7703, -5.8587, -6.8364, -5.883, -5.5861, -5.7499, -5.6821, -6.4537, -5.7496, -6.4555, -6.2489, -6.1711, -6.0684, -5.9962, -6.0905, -6.1421, -6.3125, -6.2092, -6.1565, -6.3717, -6.4183, -6.2436, -6.383, -6.3949, -6.358, -8.1508, -8.159, -8.1777, -8.2798, -8.3921, -8.2785, -8.393, -8.3992, -8.3973, -8.397, -8.005, -8.4017, -8.2912, -8.2996, -8.2984, -8.4141, -8.2957, -8.4125, -8.4216, -8.2076, -8.4126, -8.4119, -8.4134, -8.111, -8.2975, -8.4173, -8.3101, -8.415, -8.4136, -8.4194, -8.3043, -6.4767, -8.3167, -8.3228, -8.1387, -7.4099, -7.7995, -8.2358, -8.233, -7.2895, -7.4563, -6.3145, -8.1718, -6.7563, -6.6166, -6.9777, -6.7225, -7.7487, -7.0127, -7.0127, -6.6352, -7.8306, -7.5797, -7.267, -7.8969, -7.4233, -7.4233, -7.4233, -7.4233, -7.4233, -7.4233, -7.4233, -6.0683, -7.1649, -7.4211, -6.372, -6.7654, -6.6419, -7.1852, -6.0705, -6.4378, -5.6554, -5.788, -5.6881, -5.9905, -6.7495, -5.8659, -6.0342, -6.4978, -5.8199, -6.0799, -6.5261, -6.1132, -6.6486, -6.478, -6.2831, -6.3384, -6.4563, -6.2968, -6.4372, -6.3477, -6.2914, -6.3739, -6.4153, -6.3968, -6.4786, -6.493, -7.2699, -6.9162, -8.3275, -8.1152, -8.087, -8.3462, -8.3463, -8.3447, -8.3517, -8.3436, -8.3496, -8.3508, -8.3467, -8.3495, -8.351, -8.3516, -8.3548, -8.3546, -7.6451, -8.353, -8.3563, -8.3593, -8.2469, -8.3577, -8.3507, -8.2519, -8.3567, -8.356, -8.3625, -8.3536, -6.7398, -8.256, -7.9305, -6.2966, -7.17, -7.0423, -7.1024, -7.2346, -7.3079, -6.4569, -7.8214, -7.4729, -7.5669, -6.5351, -7.3152, -7.01, -6.3005, -7.6706, -7.7863, -8.0721, -8.0639, -7.9173, -7.9173, -7.9173, -7.9173, -7.9173, -6.9695, -6.7436, -6.9199, -6.6455, -6.3941, -5.8264, -6.2058, -5.4073, -7.4438, -5.1429, -5.3206, -6.1428, -6.2296, -6.605, -6.3163, -5.8005, -6.4251, -5.7305, -6.1201, -5.8742, -5.9489, -6.0592, -6.2062, -6.1955, -6.5469, -6.252, -6.1679, -6.2895, -6.4481, -6.4872, -6.4562, -6.4815, -6.4881, -6.4938], "loglift": [30.0, 29.0, 28.0, 27.0, 26.0, 25.0, 24.0, 23.0, 22.0, 21.0, 20.0, 19.0, 18.0, 17.0, 16.0, 15.0, 14.0, 13.0, 12.0, 11.0, 10.0, 9.0, 8.0, 7.0, 6.0, 5.0, 4.0, 3.0, 2.0, 1.0, 0.5193, 0.5176, 0.5122, 0.5109, 0.5102, 0.5083, 0.5059, 0.5056, 0.5045, 0.5036, 0.503, 0.5026, 0.4996, 0.4932, 0.4932, 0.4923, 0.4913, 0.491, 0.4904, 0.483, 0.482, 0.4812, 0.4811, 0.4796, 0.4795, 0.4793, 0.4784, 0.4783, 0.4778, 0.4774, 0.4664, 0.475, 0.4735, 0.452, 0.4544, 0.457, 0.4729, 0.4598, 0.4554, 0.4478, 0.4589, 0.4329, 0.4536, 0.4543, 0.3802, 0.4683, 0.4308, 0.4137, 0.4631, 0.3917, 0.2546, 0.4479, 0.3213, 0.2465, 0.2012, 0.1062, 0.194, 0.1353, 0.1813, 0.1979, 0.0539, 0.1824, 0.2049, 0.1543, 0.0497, 0.2133, -0.014, 0.0167, 0.1985, 0.2628, -0.0704, 0.2466, 0.1325, 1.3599, 1.3502, 1.3498, 1.3491, 1.3452, 1.3449, 1.3447, 1.3447, 1.3387, 1.3369, 1.3368, 1.3363, 1.3353, 1.335, 1.3345, 1.3337, 1.3328, 1.332, 1.3319, 1.3317, 1.3315, 1.3297, 1.3276, 1.3269, 1.3265, 1.3252, 1.325, 1.324, 1.3224, 1.3204, 1.3182, 1.3176, 1.3161, 1.3189, 1.3076, 1.3061, 1.2945, 1.3064, 1.3104, 0.7633, 0.4797, 0.4068, 0.2992, 0.1594, 0.1526, 0.4298, 0.2213, 0.1551, 0.5411, 0.2376, 0.352, -0.2636, 0.0231, 0.131, -0.3738, -0.1522, 0.089, -0.173, -0.3382, 1.6598, 1.6476, 1.6329, 1.625, 1.625, 1.625, 1.6205, 1.6106, 1.6106, 1.6106, 1.6051, 1.6051, 1.5979, 1.5952, 1.5919, 1.5876, 1.5867, 1.5867, 1.5867, 1.5812, 1.5805, 1.5805, 1.5805, 1.5805, 1.5805, 1.5805, 1.5805, 1.5805, 1.5805, 1.5802, 1.533, 1.5689, 1.5715, 1.5715, 1.5439, 1.5434, 1.54, 1.4906, 1.5592, 1.4955, 1.4794, 1.4421, 1.4975, 1.5308, 1.4927, 1.4722, 1.4353, 1.4863, 1.4253, 1.519, 1.3605, 1.2206, 0.8552, 0.8384, 0.1324, 0.1012, -0.4678, -0.4378, -0.035, -0.6123, -0.4951, 0.5428, -0.3668, -0.6435, -0.8948, -0.4806, -0.633, 1.9997, 1.9907, 1.9704, 1.9664, 1.9433, 1.9426, 1.9418, 1.9412, 1.939, 1.9364, 1.9361, 1.9355, 1.9353, 1.934, 1.9336, 1.9332, 1.933, 1.9327, 1.9327, 1.9324, 1.9309, 1.9301, 1.9296, 1.9296, 1.9286, 1.9283, 1.9271, 1.9268, 1.9242, 1.9242, 1.9215, 1.8836, 1.9072, 1.9201, 1.7453, 1.9088, 1.9191, 1.8965, 1.9103, 1.9062, 1.9193, 1.9004, 1.9173, 1.7755, 1.8995, 1.894, 1.5453, 1.9159, 1.8904, 1.3999, 1.5554, 1.4777, 1.4735, 1.7228, 1.5657, 1.7294, 1.185, 1.8323, 0.7074, 1.4507, 0.8697, 0.9581, -0.0801, 1.5825, 0.9267, 1.6191, 0.9458, -0.5936, 0.0733, -0.5527, -0.6313, -0.5902, 0.5084, -0.5811, -0.978, -0.8448, -1.0031, -0.1581, -1.1919, -0.1588, -0.6903, -0.8324, -1.025, -1.3731, -1.1821, -1.1095, -0.7657, -1.0531, -1.3131, -0.7993, -0.6741, -1.4085, -0.9946, -1.1189, -1.6076, 1.9836, 1.9809, 1.961, 1.9523, 1.9495, 1.9492, 1.9447, 1.9436, 1.94, 1.9399, 1.9384, 1.9369, 1.9349, 1.9338, 1.9289, 1.9269, 1.9261, 1.9245, 1.9239, 1.9228, 1.9228, 1.9213, 1.9209, 1.9205, 1.9186, 1.9186, 1.9184, 1.9181, 1.9181, 1.9174, 1.9164, 1.7698, 1.9104, 1.9062, 1.879, 1.7695, 1.8272, 1.8894, 1.8868, 1.6605, 1.6365, 1.2431, 1.8599, 1.3524, 1.2766, 1.3897, 1.2725, 1.6646, 1.303, 1.303, 1.0859, 1.6837, 1.5492, 1.3392, 1.6764, 1.3674, 1.3674, 1.3674, 1.3674, 1.3674, 1.3674, 1.3674, 0.2274, 1.0494, 1.2617, 0.2087, 0.5794, 0.3926, 0.97, -0.4172, 0.0367, -1.0473, -0.883, -1.1304, -0.7046, 0.3864, -0.9459, -0.7323, -0.045, -1.1409, -0.8114, -0.2294, -1.0806, 0.005, -0.549, -1.127, -1.0624, -0.7121, -1.4617, -0.8786, -1.3043, -1.6683, -1.4656, -1.2762, -1.6463, -1.1399, -1.1047, 2.0828, 2.0338, 2.0138, 2.0034, 2.0014, 1.9993, 1.992, 1.9912, 1.9883, 1.9877, 1.987, 1.9864, 1.9858, 1.9837, 1.983, 1.9826, 1.9822, 1.982, 1.9816, 1.9793, 1.9791, 1.9791, 1.9786, 1.9781, 1.9777, 1.9773, 1.977, 1.9765, 1.9743, 1.9736, 1.9391, 1.9711, 1.951, 1.7647, 1.8211, 1.7945, 1.7981, 1.8068, 1.8122, 1.6518, 1.892, 1.8261, 1.8351, 1.6201, 1.7776, 1.7097, 1.5484, 1.8463, 1.8603, 1.9246, 1.9219, 1.8786, 1.8786, 1.8786, 1.8786, 1.8786, 1.5787, 1.5028, 1.4556, 1.264, 1.1309, 0.6882, 0.8655, 0.246, 1.5604, -0.2229, -0.4156, 0.1539, 0.1459, 0.5309, 0.1581, -0.7679, 0.0756, -1.1728, -0.5615, -1.1952, -1.3408, -1.2158, -0.9378, -1.0394, 0.1169, -0.9661, -1.4175, -1.6664, -1.172, -0.9148, -1.5479, -1.1796, -1.1495, -1.6587]}, "token.table": {"Topic": [1, 2, 1, 2, 3, 2, 1, 2, 3, 1, 3, 1, 3, 1, 2, 3, 4, 1, 2, 3, 2, 2, 1, 2, 1, 2, 3, 1, 2, 3, 4, 1, 3, 1, 2, 3, 1, 2, 3, 4, 1, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 3, 1, 3, 2, 3, 2, 2, 1, 3, 1, 3, 1, 2, 3, 4, 1, 3, 1, 2, 3, 2, 1, 2, 1, 2, 1, 2, 3, 4, 1, 2, 3, 1, 2, 1, 2, 1, 2, 3, 4, 1, 2, 2, 2, 1, 2, 3, 4, 1, 2, 3, 4, 1, 3, 1, 3, 1, 2, 2, 1, 3, 1, 3, 1, 2, 3, 1, 2, 3, 1, 2, 1, 3, 1, 2, 1, 2, 1, 3, 1, 2, 3, 1, 1, 3, 1, 3, 1, 2, 3, 1, 1, 3, 1, 1, 2, 3, 1, 2, 1, 2, 1, 3, 1, 3, 1, 3, 1, 2, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 3, 1, 3, 1, 2, 3, 4, 1, 2, 3, 1, 3, 1, 2, 3, 1, 2, 3, 1, 2, 1, 2, 3, 2, 1, 2, 3, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 2, 2, 1, 2, 1, 2, 1, 2, 1, 3, 1, 2, 3, 1, 2, 3, 4, 2, 1, 3, 2, 2, 2, 1, 2, 3, 4, 1, 3, 1, 2, 3, 2, 1, 2, 3, 4, 2, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 1, 2, 3, 4, 2, 2, 1, 2, 3, 1, 2, 3, 2, 1, 2, 3, 4, 1, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 1, 2, 3, 4, 1, 3, 1, 2, 1, 2, 3, 2, 1, 3, 2, 3, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 1, 2, 3, 4, 2, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 3, 1, 2, 3, 4, 1, 3, 1, 3, 2, 1, 2, 1, 3, 1, 1, 2, 3, 1, 2, 3, 4, 1, 3, 2, 2, 1, 2, 3, 4, 1, 3, 2, 1, 3, 1, 2, 3, 1, 2, 3, 4, 1, 1, 2, 3, 1, 1, 2, 1, 3, 1, 3, 1, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 4, 1, 3, 1, 2, 1, 3, 1, 2, 3, 4, 1, 2, 1, 2, 3, 1, 1, 2, 4, 1, 3, 1, 1, 2, 3, 1, 2, 3, 4, 1, 2, 1, 2, 3, 4, 2, 3, 1, 1, 2, 3, 1, 3, 2, 1, 2, 3, 1, 2, 3, 1, 3, 1, 2, 3, 4, 1, 2, 3, 1, 1, 2, 1, 2, 3, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 3, 2, 2, 1, 3, 1, 2, 3, 4, 1, 3, 1, 3, 1, 2, 3, 1, 2, 3, 4, 2, 2, 1, 2, 3, 1, 2, 4, 1, 3, 2, 1, 3, 1, 2, 3, 4, 1, 2, 3, 4, 1, 3, 1, 2, 1, 2, 3, 4, 2, 1, 3, 1, 2, 3, 4, 1, 2, 3, 1, 3, 1, 2, 3, 1, 3, 1, 1, 2, 3, 4, 2, 1, 2, 3, 1, 2, 3, 4, 1, 1, 3, 1, 2, 3, 4, 1, 2, 3, 1], "Freq": [0.06061424228557139, 0.9092136342835708, 0.21505044213223076, 0.21505044213223076, 0.6451513263966923, 0.8139971449315874, 0.8161194127284221, 0.04080597063642111, 0.16322388254568443, 0.15596787090415823, 0.7798393545207912, 0.22276445090585043, 0.6682933527175513, 0.5252112050281685, 0.43517499845191104, 0.015006034429376243, 0.030012068858752485, 0.3496711479437701, 0.3496711479437701, 0.17483557397188504, 0.7242631354976271, 0.606584305284314, 0.2282932090107346, 0.4565864180214692, 0.9003951469125956, 0.021960857241770625, 0.06588257172531188, 0.6570073832692408, 0.2920032814529959, 0.04866721357549932, 0.006083401696937415, 0.19638367456022476, 0.785534698240899, 0.13958096946592694, 0.06979048473296347, 0.7676953320625981, 0.6849525724793888, 0.21200912957695367, 0.08969617020563424, 0.008154197291421295, 0.6931837270688764, 0.1374180714050767, 0.1374180714050767, 0.6870903570253835, 0.9266513116715372, 0.03706605246686149, 0.03706605246686149, 0.15604697120512484, 0.15604697120512484, 0.6241878848204994, 0.4228240829024806, 0.4228240829024806, 0.34580336852775934, 0.6916067370555187, 0.9045996042992828, 0.06461425744994877, 0.4055174144651609, 0.9149002315748778, 0.17204766693353332, 0.6881906677341333, 0.15325605230981584, 0.7662802615490792, 0.5425609630905279, 0.39978176227723106, 0.028555840162659364, 0.028555840162659364, 0.38616941736212296, 0.6178710677793968, 0.2129622427385954, 0.08712091748397084, 0.6969673398717667, 0.9448326661087602, 0.052573389485688085, 0.9463210107423856, 0.4225055315645543, 0.4225055315645543, 0.7391586389545537, 0.1713991046851139, 0.08034333032114714, 0.00535622202140981, 0.9557640740534551, 0.017067215608097413, 0.017067215608097413, 0.04090382386471046, 0.9407879488883406, 0.03773572661619537, 0.9433931654048843, 0.6019607908787953, 0.20065359695959845, 0.20065359695959845, 0.20065359695959845, 0.03089803929815463, 0.9578392182427936, 0.4807202534032706, 0.6442098602044117, 0.6694591780900212, 0.2554515284817186, 0.07046938716737065, 0.008808673395921332, 0.46162050009409, 0.49712976933209696, 0.03550926923800692, 0.03550926923800692, 0.9004914193933938, 0.08186285630849034, 0.34580336852775934, 0.6916067370555187, 0.03478773431466461, 0.9566626936532766, 0.6372268014165934, 0.15325605230981584, 0.7662802615490792, 0.9375206824284605, 0.05067679364478165, 0.20688691629792708, 0.06896230543264235, 0.6896230543264236, 0.2059400657556818, 0.05148501643892045, 0.7207902301448863, 0.0382161302697461, 0.9554032567436526, 0.9685282894526258, 0.06053301809078911, 0.06192143487723047, 0.9288215231584571, 0.06691467567760188, 0.9368054594864264, 0.34580336852775934, 0.6916067370555187, 0.8905352694723025, 0.08618083252957767, 0.02872694417652589, 0.8975778689612656, 0.9133871187520229, 0.057086694922001434, 0.9532413095417863, 0.047662065477089316, 0.8919276355380008, 0.03185455841207146, 0.06370911682414292, 0.9073359383750814, 0.48495735736319, 0.48495735736319, 0.9120982879473388, 0.1618764074239405, 0.08093820371197025, 0.7284438334077322, 0.020570743144485284, 0.9668249277908083, 0.06172668269410343, 0.9259002404115515, 0.254937378733171, 0.7010777915162203, 0.9290992007446118, 0.05465289416144776, 0.960348496247338, 0.02342313405481312, 0.03391302761529753, 0.9156517456130333, 0.1374180714050767, 0.1374180714050767, 0.6870903570253835, 0.9225007587296954, 0.03690003034918782, 0.03690003034918782, 0.3942600964347475, 0.2628400642898317, 0.3614050883985186, 0.15325605230981584, 0.7662802615490792, 0.22276445090585043, 0.6682933527175513, 0.657291726931733, 0.27387155288822207, 0.0657291726931733, 0.010954862115528883, 0.17860983617615167, 0.08930491808807584, 0.7144393447046067, 0.17204766693353332, 0.6881906677341333, 0.901473143610086, 0.02651391598853194, 0.05302783197706388, 0.7045507259184149, 0.21591070632983683, 0.0795460497004662, 0.05603014313939772, 0.9525124333697612, 0.9313209289260009, 0.03725283715704004, 0.01862641857852002, 0.8337223265167972, 0.43371773959757, 0.05421471744969625, 0.48793245704726623, 0.8700954061943262, 0.06366551752641411, 0.06366551752641411, 0.7023111697001903, 0.19256919169198763, 0.09628459584599382, 0.01132759951129339, 0.2582733428167073, 0.1033093371266829, 0.6198560227600974, 0.6008474611131666, 0.3137758963590981, 0.08011299481508888, 0.006676082901257406, 0.8743312580343692, 0.04371656290171846, 0.06557484435257768, 0.8803256824807625, 0.5748435161826562, 0.42810037362356884, 0.42810037362356884, 0.06544771722760342, 0.9162680411864479, 0.05017342905332379, 0.9031217229598283, 0.34580336852775934, 0.6916067370555187, 0.9168936314531445, 0.041676983247870204, 0.041676983247870204, 0.6997397616119515, 0.20580581223880925, 0.07203203428358324, 0.010290290611940462, 0.8886852905845662, 0.5100671912938556, 0.5100671912938556, 0.8138733512636045, 0.908368466498326, 0.9448326661087602, 0.22759223278504795, 0.11379611639252397, 0.6448446595576359, 0.03793203879750799, 0.22276445090585043, 0.6682933527175513, 0.24472337916466225, 0.08157445972155408, 0.6729892927028212, 0.9448326661087602, 0.5838050073014396, 0.37478839974907235, 0.028829876903774795, 0.014414938451887398, 0.9194446229522394, 0.44343002167123885, 0.4775400233382572, 0.03411000166701837, 0.03411000166701837, 0.6371725721177393, 0.2909921982899912, 0.06020528240482576, 0.010034213734137626, 0.36832324347967244, 0.2549930147166963, 0.33999068628892837, 0.2643870930613245, 0.5948709593879801, 0.13219354653066226, 0.06609677326533113, 0.9459272658590554, 0.9448326661087602, 0.9321338296816586, 0.03728535318726634, 0.03728535318726634, 0.9232453711329733, 0.05681509976202913, 0.014203774940507282, 0.9660091619259381, 0.4391388035335092, 0.37786362164511256, 0.16340048503572435, 0.010212530314732772, 0.9516903596794737, 0.4963029507163151, 0.31678911747849897, 0.16895419598853278, 0.010559637249283299, 0.8969593758969612, 0.04541566460237778, 0.04541566460237778, 0.011353916150594445, 0.9143068474610454, 0.06464795891138704, 0.01847084540325344, 0.5325582727660902, 0.4047442873022286, 0.04970543879150176, 0.014201553940429074, 0.4677674837101109, 0.4677674837101109, 0.028375048907463195, 0.9647516628537486, 0.11951988899924709, 0.11951988899924709, 0.7171193339954826, 0.9093780289348077, 0.4529142110835956, 0.4529142110835956, 0.9087753468024318, 0.0478302814106543, 0.6326487099238997, 0.2767838105917061, 0.07908108874048746, 0.019770272185121864, 0.6937203390938435, 0.2177959204131834, 0.08066515570858644, 0.008066515570858645, 0.18316044095014095, 0.5494813228504228, 0.18316044095014095, 0.18316044095014095, 0.9629979932236222, 0.7419564108572976, 0.17537151529354308, 0.06745058280520888, 0.013490116561041775, 0.9727035362194749, 0.8595631427278004, 0.14326052378796675, 0.9007178333143436, 0.03832841843890824, 0.03832841843890824, 0.19429766237716453, 0.5828929871314936, 0.19429766237716453, 0.25911777006589054, 0.06477944251647264, 0.6477944251647264, 0.7130207409454078, 0.5576493440131646, 0.37176622934210973, 0.061961038223684956, 0.061961038223684956, 0.22276445090585043, 0.6682933527175513, 0.22276445090585043, 0.6682933527175513, 0.9518002089170621, 0.06824412425613129, 0.955417739585838, 0.19638367456022476, 0.785534698240899, 0.9391241009490469, 0.21923012684995016, 0.10961506342497508, 0.6576903805498505, 0.4886795758318531, 0.24433978791592656, 0.24433978791592656, 0.08144659597197552, 0.34580336852775934, 0.6916067370555187, 0.6363739807653462, 0.9342895606546875, 0.7138160084540678, 0.23026322853357026, 0.04605264570671405, 0.011513161426678513, 0.28752966239184624, 0.5750593247836925, 0.9792889927944077, 0.24890167908752886, 0.6844796174907044, 0.23517169298927645, 0.11758584649463823, 0.7055150789678294, 0.20028361915369097, 0.10014180957684549, 0.6676120638456365, 0.033380603192281824, 0.9534216097556153, 0.6208715664799046, 0.3104357832399523, 0.3104357832399523, 0.9310099709566279, 0.06851313563524752, 0.9591838988934652, 0.9547991977354889, 0.028933309022287544, 0.26222800392244805, 0.721127010786732, 0.12735420169595318, 0.7641252101757191, 0.6378766285313285, 0.10631277142188808, 0.2657819285547202, 0.038123352177413444, 0.9149604522579227, 0.038123352177413444, 0.2282055248463096, 0.1141027624231548, 0.6275651933273514, 0.0285256906057887, 0.19638367456022476, 0.785534698240899, 0.9202191274647317, 0.06572993767605227, 0.22276445090585043, 0.6682933527175513, 0.6067888066191164, 0.2902033422960991, 0.09497563929690517, 0.010552848810767242, 0.30921305829668166, 0.6184261165933633, 0.21505044213223076, 0.21505044213223076, 0.6451513263966923, 0.9293182005066787, 0.4946335110056234, 0.4534140517551548, 0.04121945925046862, 0.22739973536122218, 0.6821992060836666, 0.9503980173528759, 0.9017005478457392, 0.025762872795592546, 0.06440718198898136, 0.6909080755656264, 0.19740230730446467, 0.10767398580243527, 0.017945664300405877, 0.9128545307268363, 0.041493387760310745, 0.793924130039681, 0.1677304500083833, 0.03354609000167666, 0.011182030000558887, 0.9461382588265813, 0.05256323660147674, 0.9232704188807064, 0.8418882782840178, 0.09150959546565411, 0.05490575727939247, 0.9355215964468115, 0.0492379787603585, 0.9448326661087602, 0.20479701117626756, 0.06826567039208918, 0.7281671508489513, 0.2411448172028721, 0.06028620430071802, 0.6631482473078982, 0.9659680399469306, 0.03018650124834158, 0.3501707229432575, 0.49023901212056054, 0.10505121688297726, 0.035017072294325755, 0.23732763651219402, 0.47465527302438804, 0.23732763651219402, 0.949529634976742, 0.04670536422025993, 0.9341072844051985, 0.23885767466050836, 0.11942883733025418, 0.5971441866512709, 0.9059456199987952, 0.07105455843127804, 0.01776363960781951, 0.22536072144956232, 0.45072144289912464, 0.22536072144956232, 0.22536072144956232, 0.9067448282134899, 0.07351985093622891, 0.02450661697874297, 0.21447958965270023, 0.10723979482635011, 0.7506785637844509, 0.959460282567819, 0.02284429244209093, 0.02284429244209093, 0.22276445090585043, 0.6682933527175513, 0.971862479211835, 0.7147981721076679, 0.15596787090415823, 0.7798393545207912, 0.5916331454942168, 0.2793823187056024, 0.11503977829054214, 0.01643425404150602, 0.1401631986971291, 0.7008159934856455, 0.15596787090415823, 0.7798393545207912, 0.9048967023905803, 0.01508161170650967, 0.06032644682603868, 0.733776350755384, 0.17810105600858836, 0.07836446464377887, 0.007124042240343534, 0.9599856815417851, 0.9391352368492129, 0.292590086886496, 0.585180173772992, 0.09753002896216534, 0.2696694627619138, 0.5393389255238276, 0.1348347313809569, 0.22276445090585043, 0.6682933527175513, 0.9303873773667508, 0.22276445090585043, 0.6682933527175513, 0.7330543527900815, 0.19635384449734325, 0.06545128149911442, 0.013090256299822883, 0.5611729321768567, 0.28058646608842835, 0.1454892787125184, 0.010392091336608457, 0.34580336852775934, 0.6916067370555187, 0.04084246706333494, 0.9802192095200387, 0.7027939726533291, 0.20992547235099443, 0.08214475005038913, 0.009127194450043235, 0.7718660149375387, 0.2522525881493467, 0.6936946174107035, 0.20151465636798588, 0.10075732818399294, 0.6045439691039576, 0.10075732818399294, 0.9030939491238317, 0.03762891454682632, 0.03762891454682632, 0.11680865150277055, 0.8176605605193938, 0.8402796514757246, 0.10003329184234817, 0.0600199751054089, 0.34580336852775934, 0.6916067370555187, 0.9486949614374117, 0.53236086604803, 0.35490724403202, 0.09555195031631308, 0.013650278616616154, 0.7562996413779693, 0.24166638245987354, 0.08055546081995785, 0.6444436865596628, 0.5694096273743838, 0.3376731511173671, 0.09269459050280666, 0.006621042178771905, 0.6444835078902721, 0.9547754494263507, 0.05967346558914692, 0.3598249688370131, 0.5397374532555197, 0.08303653127007996, 0.013839421878346659, 0.8940846935504396, 0.027093475562134536, 0.05418695112426907, 0.4866405412904693], "Term": ["able", "able", "aboard", "aboard", "aboard", "afternoon", "alderaan", "alderaan", "alderaan", "ally", "ally", "among", "among", "anakin", "anakin", "anakin", "anakin", "annie", "annie", "annie", "apartment", "arena", "army", "army", "around", "around", "around", "artoo", "artoo", "artoo", "artoo", "assault", "assault", "asteroid", "asteroid", "asteroid", "back", "back", "back", "back", "bail", "bargain", "bargain", "bargain", "become", "become", "become", "biggs", "biggs", "biggs", "blaster", "blaster", "block", "block", "bounty", "bounty", "building", "came", "carbon", "carbon", "cargo", "cargo", "chancellor", "chancellor", "chancellor", "chancellor", "check", "check", "chewie", "chewie", "chewie", "cityscape", "clear", "clear", "cockpit", "cockpit", "come", "come", "come", "come", "coming", "coming", "coming", "command", "command", "commander", "commander", "cont", "cont", "cont", "cont", "continuing", "continuing", "corridor", "coruscant", "could", "could", "could", "could", "council", "council", "council", "council", "cruiser", "cruiser", "dantooine", "dantooine", "dark", "dark", "dawn", "deactivated", "deactivated", "death", "death", "deflector", "deflector", "deflector", "destiny", "destiny", "destiny", "destroy", "destroy", "destroyed", "destroyed", "done", "done", "easy", "easy", "eisley", "eisley", "emperor", "emperor", "emperor", "enemy", "energy", "energy", "escape", "escape", "even", "even", "even", "every", "extinct", "extinct", "failed", "falcon", "falcon", "falcon", "father", "father", "fear", "fear", "field", "field", "fight", "fight", "fighter", "fighter", "fire", "fire", "firepower", "firepower", "firepower", "first", "first", "first", "fleet", "fleet", "fleet", "fluent", "fluent", "following", "following", "force", "force", "force", "force", "forever", "forever", "forever", "forgotten", "forgotten", "found", "found", "found", "friend", "friend", "friend", "galaxy", "galaxy", "general", "general", "general", "geonosis", "getting", "getting", "getting", "give", "give", "give", "going", "going", "going", "going", "gold", "gold", "gold", "good", "good", "good", "good", "great", "great", "great", "ground", "gunship", "handle", "handle", "hang", "hang", "happened", "happened", "harvest", "harvest", "hear", "hear", "hear", "help", "help", "help", "help", "homestead", "hour", "hour", "house", "hurt", "huttese", "imperial", "imperial", "imperial", "imperial", "interpreter", "interpreter", "jabba", "jabba", "jabba", "jango", "jedi", "jedi", "jedi", "jedi", "jump", "kenobi", "kenobi", "kenobi", "kenobi", "know", "know", "know", "know", "lando", "lando", "lando", "late", "late", "late", "late", "learned", "ledge", "left", "left", "left", "leia", "leia", "leia", "lightsaber", "like", "like", "like", "like", "longer", "look", "look", "look", "look", "lord", "lord", "lord", "lord", "luke", "luke", "luke", "master", "master", "master", "master", "mesa", "mesa", "might", "might", "millennium", "millennium", "millennium", "mistake", "money", "money", "moon", "moon", "much", "much", "much", "much", "must", "must", "must", "must", "naboo", "naboo", "naboo", "naboo", "name", "need", "need", "need", "need", "next", "night", "night", "nothing", "nothing", "nothing", "number", "number", "number", "operational", "operational", "operational", "outskirt", "padme", "padme", "padme", "padme", "party", "party", "passage", "passage", "path", "patience", "patience", "perfectly", "perfectly", "perhaps", "piece", "piece", "piece", "pilot", "pilot", "pilot", "pilot", "play", "play", "pleased", "possible", "power", "power", "power", "power", "precise", "precise", "presence", "pretty", "pretty", "price", "price", "price", "princess", "princess", "princess", "princess", "proceed", "queen", "queen", "queen", "quick", "quickly", "quickly", "quite", "quite", "range", "range", "reach", "reach", "ready", "ready", "ready", "really", "really", "really", "rebel", "rebel", "rebel", "rebel", "rendezvous", "rendezvous", "return", "return", "ridge", "ridge", "right", "right", "right", "right", "room", "room", "season", "season", "season", "security", "senate", "senate", "senate", "seven", "seven", "shall", "shield", "shield", "shield", "ship", "ship", "ship", "ship", "shuttle", "shuttle", "side", "side", "side", "side", "sister", "sister", "situation", "skywalker", "skywalker", "skywalker", "small", "small", "sola", "solo", "solo", "solo", "somebody", "somebody", "somebody", "soon", "soon", "sorry", "sorry", "sorry", "sorry", "space", "space", "space", "speak", "stand", "stand", "standing", "standing", "standing", "star", "star", "star", "starship", "starship", "starship", "starship", "station", "station", "station", "strike", "strike", "strike", "strong", "strong", "strong", "stuck", "stuck", "stupid", "sunset", "supposed", "supposed", "sure", "sure", "sure", "sure", "surprise", "surprise", "sweetheart", "sweetheart", "system", "system", "system", "take", "take", "take", "take", "talk", "talking", "tatooine", "tatooine", "tatooine", "temple", "temple", "temple", "terminal", "terminal", "thanks", "thermal", "thermal", "thing", "thing", "thing", "thing", "think", "think", "think", "think", "thirty", "thirty", "three", "three", "time", "time", "time", "time", "tipoca", "transport", "transport", "uncle", "uncle", "uncle", "uncle", "understand", "understand", "understand", "unfortunate", "unfortunate", "vader", "vader", "vader", "vaporators", "vaporators", "view", "want", "want", "want", "want", "watto", "wedge", "wedge", "wedge", "well", "well", "well", "well", "wesa", "wonder", "wonder", "would", "would", "would", "would", "young", "young", "young", "yousa"]}, "R": 30, "lambda.step": 0.01, "plot.opts": {"xlab": "PC1", "ylab": "PC2"}, "topic.order": [2, 5, 3, 4, 6, 1]};
+
+function LDAvis_load_lib(url, callback){
+  var s = document.createElement('script');
+  s.src = url;
+  s.async = true;
+  s.onreadystatechange = s.onload = callback;
+  s.onerror = function(){console.warn("failed to load library " + url);};
+  document.getElementsByTagName("head")[0].appendChild(s);
+}
+
+if(typeof(LDAvis) !== "undefined"){
+   // already loaded: just create the visualization
+   !function(LDAvis){
+       new LDAvis("#" + "ldavis_el927219084931370561266117070", ldavis_el927219084931370561266117070_data);
+   }(LDAvis);
+}else if(typeof define === "function" && define.amd){
+   // require.js is available: use it to load d3/LDAvis
+   require.config({paths: {d3: "https://d3js.org/d3.v5"}});
+   require(["d3"], function(d3){
+      window.d3 = d3;
+      LDAvis_load_lib("https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.3.1/pyLDAvis/js/ldavis.v3.0.0.js", function(){
+        new LDAvis("#" + "ldavis_el927219084931370561266117070", ldavis_el927219084931370561266117070_data);
+      });
+    });
+}else{
+    // require.js not available: dynamically load d3 & LDAvis
+    LDAvis_load_lib("https://d3js.org/d3.v5.js", function(){
+         LDAvis_load_lib("https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.3.1/pyLDAvis/js/ldavis.v3.0.0.js", function(){
+                 new LDAvis("#" + "ldavis_el927219084931370561266117070", ldavis_el927219084931370561266117070_data);
+            })
+         });
+}
+</script></div></div>
+</div>
+<p>Here topic 5 (in the plot) corrosponds to topic 0 (in our model print), and we see that this topic is neglegeble in size. Topic 1 (plot) corrosponds to topic 5 (print output) and given it’s large size and the fact that it contains words like (Luke, Vader, Emporer, Leia, Force etc.) it most likely describes the entire original trilogy (movies 4-6).</p>
+<p>The fact that LDA does not capture all 6 movies and just the generel themes is likely due to two reasons.</p>
+<ol class="simple">
+<li><p>It’s an unsupervised model and thus the result will differ everytime, which is why we set the random_state. This also means it’s probably possible to create 6 clearly different topics for the 6 movies, but statistically it will be unlikely because</p></li>
+<li><p>the movies are very similar. They are all from the same cinematic universe and movies 4 and 6 had the same plot of destroying the death star. Additionaly, the main characters are the same in the sequal, and in the prequals.</p></li>
+</ol>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(0,
+  &#39;0.011*&quot;jedi&quot; + 0.010*&quot;master&quot; + 0.010*&quot;right&quot; + 0.010*&quot;father&quot; + 0.010*&quot;know&quot; + 0.008*&quot;good&quot; + 0.008*&quot;well&quot; + 0.007*&quot;going&quot;&#39;),
+ (1,
+  &#39;0.014*&quot;luke&quot; + 0.010*&quot;come&quot; + 0.009*&quot;know&quot; + 0.009*&quot;going&quot; + 0.008*&quot;right&quot; + 0.008*&quot;artoo&quot; + 0.007*&quot;take&quot; + 0.007*&quot;back&quot;&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Luke, father, and Chewie are from the sequals, thus the hidden topic modeling is still not capturing prequals/sequals.</p>
+<p>Finally, we’ll do a hidden topic analyses for each movie sepperately:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Movie: 1
+[(0, &#39;0.019*&quot;cont&quot; + 0.008*&quot;think&quot; + 0.008*&quot;master&quot; + 0.007*&quot;take&quot; + 0.007*&quot;know&quot; + 0.007*&quot;mesa&quot;&#39;)]
+
+Movie: 2
+[(0, &#39;0.016*&quot;master&quot; + 0.016*&quot;geonosis&quot; + 0.014*&quot;jedi&quot; + 0.010*&quot;night&quot; + 0.010*&quot;anakin&quot; + 0.009*&quot;naboo&quot;&#39;)]
+
+Movie: 3
+[(0, &#39;0.018*&quot;jedi&quot; + 0.016*&quot;anakin&quot; + 0.012*&quot;master&quot; + 0.011*&quot;continuing&quot; + 0.010*&quot;chancellor&quot; + 0.010*&quot;know&quot;&#39;)]
+
+Movie: 4
+[(0, &#39;0.012*&quot;going&quot; + 0.011*&quot;luke&quot; + 0.009*&quot;right&quot; + 0.009*&quot;come&quot; + 0.007*&quot;know&quot; + 0.007*&quot;ship&quot;&#39;)]
+
+Movie: 5
+[(0, &#39;0.010*&quot;know&quot; + 0.009*&quot;right&quot; + 0.009*&quot;going&quot; + 0.008*&quot;well&quot; + 0.008*&quot;good&quot; + 0.007*&quot;luke&quot;&#39;)]
+
+Movie: 6
+[(0, &#39;0.012*&quot;luke&quot; + 0.009*&quot;artoo&quot; + 0.009*&quot;come&quot; + 0.009*&quot;father&quot; + 0.008*&quot;chewie&quot; + 0.008*&quot;good&quot;&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Unsuprisngly the topic modelling better captures the plot of the movies. Geonosis a planet important to the second movie, and ‘Mesa’ Jar-Jar’s catchphrase from the first movie. However, we still se the topics for movies 1 and 5 are undescriptive given their low word score.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Page_NLP.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Word clouds</p>
+        </div>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Orfeas, Harald, Mia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
