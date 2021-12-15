@@ -1,0 +1,17 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: TEST! 
+    chapters:
+      - file: Page_Data_vis.ipynb
+        sections:
+        - file: Page_Network.ipynb
+      - file: Page_NLP.ipynb
+      - file: Page_Script.ipynb
+
+
+
+
